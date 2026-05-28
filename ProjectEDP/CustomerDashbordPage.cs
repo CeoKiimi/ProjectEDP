@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectEDP
 {
-    public partial class Form1 : Form
+    public partial class CustomerDashbord : Form
     {
-        public Form1()
+        public CustomerDashbord()
         {
             InitializeComponent();
         }

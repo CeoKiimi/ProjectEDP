@@ -16,5 +16,15 @@ namespace ProjectEDP
         {
             InitializeComponent();
         }
+
+        private void reserveLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TimeLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

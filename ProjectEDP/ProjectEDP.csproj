@@ -132,6 +132,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="database.sql" />
     <Content Include="EasyLaundry.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

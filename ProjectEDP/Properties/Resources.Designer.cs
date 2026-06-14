@@ -73,6 +73,26 @@ namespace ProjectEDP.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap laundry {
+            get {
+                object obj = ResourceManager.GetObject("laundry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laundry2 {
+            get {
+                object obj = ResourceManager.GetObject("laundry2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tah {
             get {
                 object obj = ResourceManager.GetObject("tah", resourceCulture);

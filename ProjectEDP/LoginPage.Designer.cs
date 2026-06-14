@@ -46,9 +46,10 @@
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Showcard Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.Color.Black;
-            this.title.Location = new System.Drawing.Point(103, 9);
+            this.title.Location = new System.Drawing.Point(137, 11);
+            this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(504, 79);
+            this.title.Size = new System.Drawing.Size(624, 98);
             this.title.TabIndex = 1;
             this.title.Text = "EASY LAUNDRY";
             // 
@@ -56,9 +57,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(326, 138);
+            this.label1.Location = new System.Drawing.Point(435, 170);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 16);
+            this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Email";
             // 
@@ -66,33 +68,37 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(316, 170);
+            this.label2.Location = new System.Drawing.Point(421, 209);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 16);
+            this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(398, 134);
+            this.txtEmail.Location = new System.Drawing.Point(531, 165);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(228, 20);
+            this.txtEmail.Size = new System.Drawing.Size(303, 22);
             this.txtEmail.TabIndex = 4;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(398, 166);
+            this.txtPassword.Location = new System.Drawing.Point(531, 204);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(228, 20);
+            this.txtPassword.Size = new System.Drawing.Size(303, 22);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // chkShowPassword
             // 
             this.chkShowPassword.AutoSize = true;
-            this.chkShowPassword.Location = new System.Drawing.Point(398, 192);
+            this.chkShowPassword.Location = new System.Drawing.Point(531, 236);
+            this.chkShowPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkShowPassword.Name = "chkShowPassword";
-            this.chkShowPassword.Size = new System.Drawing.Size(129, 17);
+            this.chkShowPassword.Size = new System.Drawing.Size(158, 20);
             this.chkShowPassword.TabIndex = 6;
             this.chkShowPassword.Text = "Show/Hide Password";
             this.chkShowPassword.UseVisualStyleBackColor = true;
@@ -101,9 +107,10 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(530, 224);
+            this.btnLogin.Location = new System.Drawing.Point(707, 276);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(96, 38);
+            this.btnLogin.Size = new System.Drawing.Size(128, 47);
             this.btnLogin.TabIndex = 8;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -113,9 +120,10 @@
             // 
             this.lblRegister.AutoSize = true;
             this.lblRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegister.Location = new System.Drawing.Point(510, 358);
+            this.lblRegister.Location = new System.Drawing.Point(680, 441);
+            this.lblRegister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(116, 16);
+            this.lblRegister.Size = new System.Drawing.Size(148, 20);
             this.lblRegister.TabIndex = 9;
             this.lblRegister.TabStop = true;
             this.lblRegister.Text = "Create an Account";
@@ -125,29 +133,30 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(480, 333);
+            this.label3.Location = new System.Drawing.Point(640, 410);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 16);
+            this.label3.Size = new System.Drawing.Size(185, 20);
             this.label3.TabIndex = 10;
             this.label3.Text = "Don\'t have an account?";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::ProjectEDP.Properties.Resources.tah;
-            this.pictureBox1.Location = new System.Drawing.Point(34, 102);
+            this.pictureBox1.Location = new System.Drawing.Point(45, 126);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(266, 323);
+            this.pictureBox1.Size = new System.Drawing.Size(354, 397);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(684, 461);
+            this.ClientSize = new System.Drawing.Size(912, 567);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.btnLogin);
@@ -158,6 +167,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.title);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginForm";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

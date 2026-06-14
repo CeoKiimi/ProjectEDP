@@ -63,11 +63,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDashboardPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboardPage.Designer.cs">
+      <DependentUpon>AdminDashboardPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerDashbordPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerDashbordPage.Designer.cs">
       <DependentUpon>CustomerDashbordPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
@@ -83,8 +95,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminDashboardPage.resx">
+      <DependentUpon>AdminDashboardPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerDashbordPage.resx">
       <DependentUpon>CustomerDashbordPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage.resx">
+      <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
@@ -140,6 +158,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>EasyLaundry.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\laundry2.jpg" />
+    <None Include="Resources\laundry.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -37,9 +37,10 @@
             // 
             this.welcomeLbl.AutoSize = true;
             this.welcomeLbl.Font = new System.Drawing.Font("Britannic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLbl.Location = new System.Drawing.Point(114, 43);
+            this.welcomeLbl.Location = new System.Drawing.Point(86, 35);
+            this.welcomeLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.welcomeLbl.Name = "welcomeLbl";
-            this.welcomeLbl.Size = new System.Drawing.Size(783, 67);
+            this.welcomeLbl.Size = new System.Drawing.Size(625, 53);
             this.welcomeLbl.TabIndex = 0;
             this.welcomeLbl.Text = "WELCOME TO EASY LAUNDRY";
             // 
@@ -47,9 +48,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(260, 128);
+            this.label1.Location = new System.Drawing.Point(195, 104);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(450, 29);
+            this.label1.Size = new System.Drawing.Size(361, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Make a reservation with Easy Laundry";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -58,24 +60,27 @@
             // 
             this.ReserveBtn.BackColor = System.Drawing.Color.CadetBlue;
             this.ReserveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReserveBtn.Location = new System.Drawing.Point(395, 173);
+            this.ReserveBtn.Location = new System.Drawing.Point(296, 141);
+            this.ReserveBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ReserveBtn.Name = "ReserveBtn";
-            this.ReserveBtn.Size = new System.Drawing.Size(204, 44);
+            this.ReserveBtn.Size = new System.Drawing.Size(153, 36);
             this.ReserveBtn.TabIndex = 2;
             this.ReserveBtn.Text = "Click To Make Reservation";
             this.ReserveBtn.UseVisualStyleBackColor = false;
+            this.ReserveBtn.Click += new System.EventHandler(this.ReserveBtn_Click);
             // 
             // Homepage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.BackgroundImage = global::ProjectEDP.Properties.Resources.laundry2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1023, 650);
+            this.ClientSize = new System.Drawing.Size(767, 528);
             this.Controls.Add(this.ReserveBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.welcomeLbl);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Homepage";
             this.Text = "Homepage";
             this.ResumeLayout(false);

@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ProjectEDP
 {
     public partial class LoginForm : Form
     {
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Documents\TEST\ProjectEDP\ProjectEDP\EasyLaundry.mdf;Integrated Security=True;Connect Timeout=30";
+
         public LoginForm()
         {
             InitializeComponent();
+            txtPassword.UseSystemPasswordChar = true;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -25,50 +29,87 @@ namespace ProjectEDP
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkShowPassword.Checked)
-            {
-                txtPassword.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtPassword.UseSystemPasswordChar = true;
-            }
+            txtPassword.UseSystemPasswordChar = !chkShowPassword.Checked;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            string usernameOrEmail = txtEmail.Text.Trim();
+            string password = txtPassword.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(usernameOrEmail))
             {
-                MessageBox.Show("Please enter your email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter your email or admin username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
-            {
-                MessageBox.Show("Please enter a valid email address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (string.IsNullOrWhiteSpace(txtEmail.Text))
-            {
-                MessageBox.Show("Please enter your email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
-            {
-                MessageBox.Show("Please enter a valid email address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (string.IsNullOrWhiteSpace(txtPassword.Text))
+
+            if (string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Please enter your password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (txtPassword.Text.Length < 8)
+
+            try
             {
-                MessageBox.Show("Password must be at least 8 characters long.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+
+                    // 1. Check admin login first
+                    string adminQuery = @"SELECT COUNT(*) 
+                                          FROM Admin 
+                                          WHERE adminName = @Username 
+                                          AND [password] = @Password";
+
+                    using (SqlCommand adminCmd = new SqlCommand(adminQuery, con))
+                    {
+                        adminCmd.Parameters.AddWithValue("@Username", usernameOrEmail);
+                        adminCmd.Parameters.AddWithValue("@Password", password);
+
+                        int adminCount = (int)adminCmd.ExecuteScalar();
+
+                        if (adminCount > 0)
+                        {
+                            MessageBox.Show("Admin login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            AdminDashboardPage adminForm = new AdminDashboardPage();
+                            adminForm.Show();
+                            this.Hide();
+                            return;
+                        }
+                    }
+
+                    // 2. Check customer/student login
+                    string customerQuery = @"SELECT COUNT(*) 
+                                             FROM Customer 
+                                             WHERE custEmail = @Email 
+                                             AND [password] = @Password";
+
+                    using (SqlCommand customerCmd = new SqlCommand(customerQuery, con))
+                    {
+                        customerCmd.Parameters.AddWithValue("@Email", usernameOrEmail);
+                        customerCmd.Parameters.AddWithValue("@Password", password);
+
+                        int customerCount = (int)customerCmd.ExecuteScalar();
+
+                        if (customerCount > 0)
+                        {
+                            MessageBox.Show("Customer login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            Homepage homeForm = new Homepage();
+                            homeForm.Show();
+                            this.Hide();
+                            return;
+                        }
+                    }
+
+                    MessageBox.Show("Account not found. Please register first, or check your password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            CustomerDashbord form = new CustomerDashbord();
-            form.Show();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Database error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

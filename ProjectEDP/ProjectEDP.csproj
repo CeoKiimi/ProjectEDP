@@ -69,12 +69,18 @@
     <Compile Include="AdminDashboardPage.Designer.cs">
       <DependentUpon>AdminDashboardPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="CurrentUser.cs" />
-    <Compile Include="CustomerDashbordPage.cs">
+    <Compile Include="AdminOrderPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerDashbordPage.Designer.cs">
-      <DependentUpon>CustomerDashbordPage.cs</DependentUpon>
+    <Compile Include="AdminOrderPage.Designer.cs">
+      <DependentUpon>AdminOrderPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentUser.cs" />
+    <Compile Include="CustomerDashboardPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerDashboardPage.Designer.cs">
+      <DependentUpon>CustomerDashboardPage.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerReservationPage.cs">
       <SubType>Form</SubType>
@@ -94,6 +100,12 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="PaymentPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentPage.Designer.cs">
+      <DependentUpon>PaymentPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisterPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,8 +117,11 @@
     <EmbeddedResource Include="AdminDashboardPage.resx">
       <DependentUpon>AdminDashboardPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDashbordPage.resx">
-      <DependentUpon>CustomerDashbordPage.cs</DependentUpon>
+    <EmbeddedResource Include="AdminOrderPage.resx">
+      <DependentUpon>AdminOrderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerDashboardPage.resx">
+      <DependentUpon>CustomerDashboardPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerReservationPage.resx">
       <DependentUpon>CustomerReservationPage.cs</DependentUpon>
@@ -116,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentPage.resx">
+      <DependentUpon>PaymentPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterPage.resx">
       <DependentUpon>RegisterPage.cs</DependentUpon>

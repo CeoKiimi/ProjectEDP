@@ -38,7 +38,7 @@
             // 
             this.welcomeLbl.AutoSize = true;
             this.welcomeLbl.Font = new System.Drawing.Font("Britannic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLbl.Location = new System.Drawing.Point(119, 34);
+            this.welcomeLbl.Location = new System.Drawing.Point(117, 34);
             this.welcomeLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.welcomeLbl.Name = "welcomeLbl";
             this.welcomeLbl.Size = new System.Drawing.Size(625, 53);
@@ -49,7 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(251, 112);
+            this.label1.Location = new System.Drawing.Point(250, 112);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(361, 24);
@@ -61,7 +61,7 @@
             // 
             this.ReserveBtn.BackColor = System.Drawing.Color.CadetBlue;
             this.ReserveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReserveBtn.Location = new System.Drawing.Point(352, 149);
+            this.ReserveBtn.Location = new System.Drawing.Point(351, 149);
             this.ReserveBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ReserveBtn.Name = "ReserveBtn";
             this.ReserveBtn.Size = new System.Drawing.Size(153, 36);
@@ -74,7 +74,7 @@
             // 
             this.reserveListbtn.BackColor = System.Drawing.Color.CadetBlue;
             this.reserveListbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reserveListbtn.Location = new System.Drawing.Point(352, 189);
+            this.reserveListbtn.Location = new System.Drawing.Point(351, 189);
             this.reserveListbtn.Margin = new System.Windows.Forms.Padding(2);
             this.reserveListbtn.Name = "reserveListbtn";
             this.reserveListbtn.Size = new System.Drawing.Size(153, 36);

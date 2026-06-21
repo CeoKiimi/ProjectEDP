@@ -1,6 +1,6 @@
 ﻿namespace ProjectEDP
 {
-    partial class CustomerDashbord
+    partial class CustomerDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -319,7 +319,7 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // CustomerDashbord
+            // CustomerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -342,8 +342,8 @@
             this.Controls.Add(this.pickupChkBox);
             this.Controls.Add(this.ServiceLbl);
             this.Controls.Add(this.reserveLbl);
-            this.Name = "CustomerDashbord";
-            this.Text = "Customer Dashbord";
+            this.Name = "CustomerDashboard";
+            this.Text = "Customer Dashboard";
             this.TimeSlotGpBox.ResumeLayout(false);
             this.TimeSlotGpBox.PerformLayout();
             this.paymentGrpBox.ResumeLayout(false);

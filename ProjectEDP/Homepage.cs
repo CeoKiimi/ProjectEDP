@@ -24,7 +24,7 @@ namespace ProjectEDP
 
         private void ReserveBtn_Click(object sender, EventArgs e)
         {
-            CustomerDashbord form = new CustomerDashbord();
+            CustomerDashboard form = new CustomerDashboard();
             form.Show();
         }
 

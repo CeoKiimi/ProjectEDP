@@ -33,6 +33,7 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnApprove = new System.Windows.Forms.Button();
             this.btnReject = new System.Windows.Forms.Button();
+            this.btnViewOrders = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdminReservations)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(332, 503);
+            this.btnRefresh.Location = new System.Drawing.Point(279, 502);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(91, 37);
             this.btnRefresh.TabIndex = 3;
@@ -74,7 +75,7 @@
             // btnApprove
             // 
             this.btnApprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApprove.Location = new System.Drawing.Point(556, 503);
+            this.btnApprove.Location = new System.Drawing.Point(503, 502);
             this.btnApprove.Name = "btnApprove";
             this.btnApprove.Size = new System.Drawing.Size(91, 37);
             this.btnApprove.TabIndex = 4;
@@ -85,7 +86,7 @@
             // btnReject
             // 
             this.btnReject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReject.Location = new System.Drawing.Point(445, 503);
+            this.btnReject.Location = new System.Drawing.Point(392, 502);
             this.btnReject.Name = "btnReject";
             this.btnReject.Size = new System.Drawing.Size(91, 37);
             this.btnReject.TabIndex = 5;
@@ -93,18 +94,30 @@
             this.btnReject.UseVisualStyleBackColor = true;
             this.btnReject.Click += new System.EventHandler(this.btnReject_Click);
             // 
+            // btnViewOrders
+            // 
+            this.btnViewOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewOrders.Location = new System.Drawing.Point(617, 502);
+            this.btnViewOrders.Name = "btnViewOrders";
+            this.btnViewOrders.Size = new System.Drawing.Size(91, 37);
+            this.btnViewOrders.TabIndex = 6;
+            this.btnViewOrders.Text = "VIEW ORDERS";
+            this.btnViewOrders.UseVisualStyleBackColor = true;
+            this.btnViewOrders.Click += new System.EventHandler(this.btnViewOrders_Click);
+            // 
             // AdminDashboardPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.btnViewOrders);
             this.Controls.Add(this.btnReject);
             this.Controls.Add(this.btnApprove);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dgvAdminReservations);
             this.Controls.Add(this.reserveLbl);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminDashboardPage";
             this.Text = "Admin Dashboard";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
@@ -121,5 +134,6 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnApprove;
         private System.Windows.Forms.Button btnReject;
+        private System.Windows.Forms.Button btnViewOrders;
     }
 }

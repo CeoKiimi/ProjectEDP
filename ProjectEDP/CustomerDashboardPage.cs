@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace ProjectEDP
 {
-    public partial class CustomerDashbord : Form
+    public partial class CustomerDashboard : Form
     {
         private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Documents\TEST\ProjectEDP\ProjectEDP\EasyLaundry.mdf;Integrated Security=True;Connect Timeout=30";
-        public CustomerDashbord()
+        public CustomerDashboard()
         {
             InitializeComponent();
         }

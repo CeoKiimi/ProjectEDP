@@ -117,7 +117,6 @@ namespace ProjectEDP
 
                     try
                     {
-                        // 1. Change reservation status to Rejected
                         string updateReservationQuery = @"UPDATE Reservation
                                                   SET status = @Status
                                                   WHERE reservationID = @ReservationID";
@@ -130,7 +129,6 @@ namespace ProjectEDP
                             updateCmd.ExecuteNonQuery();
                         }
 
-                        // 2. Remove from Order table if it was approved before
                         string deleteOrderQuery = @"DELETE FROM [Order]
                                             WHERE reservationID = @ReservationID";
 
@@ -181,7 +179,6 @@ namespace ProjectEDP
 
                     try
                     {
-                        // 1. Update reservation status to Approved
                         string updateReservationQuery = @"UPDATE Reservation
                                                   SET status = @Status
                                                   WHERE reservationID = @ReservationID";
@@ -194,7 +191,6 @@ namespace ProjectEDP
                             updateCmd.ExecuteNonQuery();
                         }
 
-                        // 2. Check if this reservation is already in Order table
                         string checkOrderQuery = @"SELECT COUNT(*)
                                            FROM [Order]
                                            WHERE reservationID = @ReservationID";
@@ -207,7 +203,6 @@ namespace ProjectEDP
 
                             if (orderCount == 0)
                             {
-                                // 3. Insert approved reservation into Order table
                                 string insertOrderQuery = @"INSERT INTO [Order]
                                                     (reservationID, customerID, orderStatus, orderDate)
                                                     VALUES
@@ -241,6 +236,13 @@ namespace ProjectEDP
             {
                 MessageBox.Show("Database error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnViewOrders_Click(object sender, EventArgs e)
+        {
+            AdminOrderPage form = new AdminOrderPage();
+            form.Show();
+            this.Hide();
         }
     }
 }

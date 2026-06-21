@@ -51,6 +51,7 @@ namespace ProjectEDP
                                         r.deliveryAddress AS [Delivery Address],
                                         r.specialtyDetails AS [Specialty Details],
                                         r.status AS [Status],
+                                        r.totalAmount AS [Amount (RM)],
                                         r.createdAt AS [Submitted At]
                                      FROM Reservation r
                                      INNER JOIN Customer c

@@ -29,6 +29,34 @@ namespace ProjectEDP
 
         }
 
+        private decimal GetTotalAmount(SqlConnection con, List<string> services)
+        {
+            decimal totalAmount = 0;
+
+            foreach (string service in services)
+            {
+                string query = @"SELECT price 
+                         FROM Pricing_Catalog 
+                         WHERE serviceName = @ServiceName";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@ServiceName", service);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result == null)
+                    {
+                        throw new Exception("Price not found for service: " + service);
+                    }
+
+                    totalAmount += Convert.ToDecimal(result);
+                }
+            }
+
+            return totalAmount;
+        }
+
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
             if (CurrentUser.CustomerID == 0)
@@ -104,17 +132,19 @@ namespace ProjectEDP
 
             string deliveryAddress = AddressTxtBox.Text.Trim();
             string specialtyDetails = InstructionsTxt.Text.Trim();
+            decimal totalAmount = 0;
 
             try
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
+                    totalAmount = GetTotalAmount(con, services);
 
                     string query = @"INSERT INTO Reservation
-                             (customerID, serviceType, reservationDate, timeSlot, paymentMethod, deliveryAddress, specialtyDetails)
-                             VALUES
-                             (@CustomerID, @ServiceType, @ReservationDate, @TimeSlot, @PaymentMethod, @DeliveryAddress, @SpecialtyDetails)";
+                                   (customerID, serviceType, reservationDate, timeSlot, paymentMethod, deliveryAddress, specialtyDetails, totalAmount)
+                                   VALUES
+                                   (@CustomerID, @ServiceType, @ReservationDate, @TimeSlot, @PaymentMethod, @DeliveryAddress, @SpecialtyDetails, @TotalAmount)";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
@@ -125,6 +155,7 @@ namespace ProjectEDP
                         cmd.Parameters.AddWithValue("@PaymentMethod", paymentMethod);
                         cmd.Parameters.AddWithValue("@DeliveryAddress", deliveryAddress);
                         cmd.Parameters.AddWithValue("@SpecialtyDetails", specialtyDetails);
+                        cmd.Parameters.AddWithValue("@TotalAmount", totalAmount);
 
                         cmd.ExecuteNonQuery();
                     }

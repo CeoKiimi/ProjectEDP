@@ -51,9 +51,9 @@
             // btnPayNow
             // 
             this.btnPayNow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayNow.Location = new System.Drawing.Point(602, 436);
+            this.btnPayNow.Location = new System.Drawing.Point(647, 436);
             this.btnPayNow.Name = "btnPayNow";
-            this.btnPayNow.Size = new System.Drawing.Size(120, 36);
+            this.btnPayNow.Size = new System.Drawing.Size(133, 46);
             this.btnPayNow.TabIndex = 0;
             this.btnPayNow.Text = "CONFIRM PAYMENT";
             this.btnPayNow.UseVisualStyleBackColor = true;
@@ -62,9 +62,9 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(469, 436);
+            this.btnBack.Location = new System.Drawing.Point(519, 436);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(112, 36);
+            this.btnBack.Size = new System.Drawing.Size(120, 46);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "BACK";
             this.btnBack.UseVisualStyleBackColor = true;

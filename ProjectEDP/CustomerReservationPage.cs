@@ -60,6 +60,7 @@ namespace ProjectEDP
                                         r.deliveryAddress AS [Delivery Address],
                                         r.specialtyDetails AS [Specialty Details],
                                         r.status AS [Reservation Status],
+                                        r.totalAmount AS [Amount (RM)],
                                         ISNULL(o.orderStatus, 'No Order Yet') AS [Order Status],
                                         ISNULL(p.paymentStatus, 'Unpaid') AS [Payment Status],
                                         r.createdAt AS [Submitted At]

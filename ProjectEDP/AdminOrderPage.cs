@@ -52,6 +52,7 @@ namespace ProjectEDP
                                         r.deliveryAddress AS [Delivery Address],
                                         r.specialtyDetails AS [Specialty Details],
                                         r.status AS [Reservation Status],
+                                        r.totalAmount AS [Amount (RM)],
                                         o.orderStatus AS [Order Status],
                                         ISNULL(p.paymentStatus, 'Unpaid') AS [Payment Status],
                                         p.paymentDate AS [Payment Date],

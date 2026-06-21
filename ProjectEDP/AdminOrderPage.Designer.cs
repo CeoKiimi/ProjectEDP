@@ -86,7 +86,7 @@
             // 
             this.reserveLbl.AutoSize = true;
             this.reserveLbl.Font = new System.Drawing.Font("Showcard Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reserveLbl.Location = new System.Drawing.Point(308, 20);
+            this.reserveLbl.Location = new System.Drawing.Point(331, 20);
             this.reserveLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.reserveLbl.Name = "reserveLbl";
             this.reserveLbl.Size = new System.Drawing.Size(323, 47);

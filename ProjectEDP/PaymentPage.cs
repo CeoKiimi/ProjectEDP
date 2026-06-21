@@ -19,6 +19,7 @@ namespace ProjectEDP
         private int orderID;
         private int customerID;
         private string paymentMethod;
+        private decimal amount;
 
         public PaymentPage()
         {
@@ -95,6 +96,7 @@ namespace ProjectEDP
                                         r.paymentMethod,
                                         r.deliveryAddress,
                                         r.specialtyDetails,
+                                        r.totalAmount,
                                         r.status,
                                         o.orderStatus,
                                         ISNULL(p.paymentStatus, 'Unpaid') AS paymentStatus
@@ -117,6 +119,7 @@ namespace ProjectEDP
                             {
                                 orderID = Convert.ToInt32(reader["orderID"]);
                                 customerID = Convert.ToInt32(reader["customerID"]);
+                                amount = Convert.ToDecimal(reader["totalAmount"]);
                                 paymentMethod = reader["paymentMethod"].ToString();
 
                                 lblReservationID.Text = "Reservation ID: " + reader["reservationID"].ToString();
@@ -132,7 +135,7 @@ namespace ProjectEDP
                                 lblOrderStatus.Text = "Order Status: " + reader["orderStatus"].ToString();
                                 lblPaymentStatus.Text = "Payment Status: " + reader["paymentStatus"].ToString();
 
-                                lblAmount.Text = "Amount: RM 0.00";
+                                lblAmount.Text = "Amount: RM " + amount.ToString("0.00");
 
                                 if (reader["paymentStatus"].ToString() == "Paid")
                                 {
@@ -190,9 +193,9 @@ namespace ProjectEDP
                         }
 
                         string insertPaymentQuery = @"INSERT INTO Payment
-                                                      (orderID, reservationID, customerID, paymentMethod, paymentStatus, paymentDate)
-                                                      VALUES
-                                                      (@OrderID, @ReservationID, @CustomerID, @PaymentMethod, @PaymentStatus, GETDATE())";
+                              (orderID, reservationID, customerID, paymentMethod, paymentStatus, paymentDate, amount)
+                              VALUES
+                              (@OrderID, @ReservationID, @CustomerID, @PaymentMethod, @PaymentStatus, GETDATE(), @Amount)";
 
                         using (SqlCommand insertCmd = new SqlCommand(insertPaymentQuery, con, transaction))
                         {
@@ -201,6 +204,7 @@ namespace ProjectEDP
                             insertCmd.Parameters.AddWithValue("@CustomerID", customerID);
                             insertCmd.Parameters.AddWithValue("@PaymentMethod", paymentMethod);
                             insertCmd.Parameters.AddWithValue("@PaymentStatus", "Paid");
+                            insertCmd.Parameters.AddWithValue("@Amount", amount);
 
                             insertCmd.ExecuteNonQuery();
                         }

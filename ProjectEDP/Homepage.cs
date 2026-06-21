@@ -27,5 +27,11 @@ namespace ProjectEDP
             CustomerDashbord form = new CustomerDashbord();
             form.Show();
         }
+
+        private void reserveListbtn_Click(object sender, EventArgs e)
+        {
+            CustomerReservationPage form = new CustomerReservationPage();
+            form.Show();
+        }
     }
 }

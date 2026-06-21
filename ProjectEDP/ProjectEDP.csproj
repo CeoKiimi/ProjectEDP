@@ -69,11 +69,18 @@
     <Compile Include="AdminDashboardPage.Designer.cs">
       <DependentUpon>AdminDashboardPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="CurrentUser.cs" />
     <Compile Include="CustomerDashbordPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerDashbordPage.Designer.cs">
       <DependentUpon>CustomerDashbordPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerReservationPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerReservationPage.Designer.cs">
+      <DependentUpon>CustomerReservationPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Homepage.cs">
       <SubType>Form</SubType>
@@ -100,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerDashbordPage.resx">
       <DependentUpon>CustomerDashbordPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerReservationPage.resx">
+      <DependentUpon>CustomerReservationPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>

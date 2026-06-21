@@ -55,7 +55,7 @@ namespace ProjectEDP
                 {
                     con.Open();
 
-                    // 1. Check admin login first
+                    //admin
                     string adminQuery = @"SELECT COUNT(*) 
                                           FROM Admin 
                                           WHERE adminName = @Username 
@@ -79,27 +79,31 @@ namespace ProjectEDP
                         }
                     }
 
-                    // 2. Check customer/student login
-                    string customerQuery = @"SELECT COUNT(*) 
-                                             FROM Customer 
-                                             WHERE custEmail = @Email 
-                                             AND [password] = @Password";
+                    //customer
+                    string customerQuery = @"SELECT customerID, custName 
+                         FROM Customer 
+                         WHERE custEmail = @Email 
+                         AND [password] = @Password";
 
                     using (SqlCommand customerCmd = new SqlCommand(customerQuery, con))
                     {
                         customerCmd.Parameters.AddWithValue("@Email", usernameOrEmail);
                         customerCmd.Parameters.AddWithValue("@Password", password);
 
-                        int customerCount = (int)customerCmd.ExecuteScalar();
-
-                        if (customerCount > 0)
+                        using (SqlDataReader reader = customerCmd.ExecuteReader())
                         {
-                            MessageBox.Show("Customer login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (reader.Read())
+                            {
+                                CurrentUser.CustomerID = Convert.ToInt32(reader["customerID"]);
+                                CurrentUser.CustomerName = reader["custName"].ToString();
 
-                            Homepage homeForm = new Homepage();
-                            homeForm.Show();
-                            this.Hide();
-                            return;
+                                MessageBox.Show("Customer login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                Homepage form = new Homepage();
+                                form.Show();
+                                this.Hide();
+                                return;
+                            }
                         }
                     }
 

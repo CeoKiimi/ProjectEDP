@@ -32,7 +32,6 @@ namespace ProjectEDP
             string name = txtName.Text.Trim();
             string email = txtEmail.Text.Trim();
             string phone = txtPhone.Text.Trim();
-            string address = txtAddress.Text.Trim();
             string password = txtPassword.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(name))
@@ -60,11 +59,6 @@ namespace ProjectEDP
                 MessageBox.Show("Please enter a valid phone number, at least 10 digits.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (string.IsNullOrWhiteSpace(address))
-            {
-                MessageBox.Show("Please enter your address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             else if (string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Please enter a password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -82,7 +76,6 @@ namespace ProjectEDP
                 {
                     con.Open();
 
-                    // Check if email already registered
                     string checkQuery = @"SELECT COUNT(*) 
                                           FROM Customer 
                                           WHERE custEmail = @Email";
@@ -100,7 +93,7 @@ namespace ProjectEDP
                         }
                     }
 
-                    // Save customer/student account
+                    //customer
                     string insertQuery = @"INSERT INTO Customer 
                        (customerID, custName, custEmail, [password], contactNo)
                        VALUES

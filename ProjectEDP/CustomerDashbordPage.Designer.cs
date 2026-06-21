@@ -59,7 +59,7 @@
             // 
             this.reserveLbl.AutoSize = true;
             this.reserveLbl.Font = new System.Drawing.Font("Showcard Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reserveLbl.Location = new System.Drawing.Point(236, 28);
+            this.reserveLbl.Location = new System.Drawing.Point(224, 23);
             this.reserveLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.reserveLbl.Name = "reserveLbl";
             this.reserveLbl.Size = new System.Drawing.Size(411, 47);
@@ -71,7 +71,7 @@
             // 
             this.ServiceLbl.AutoSize = true;
             this.ServiceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ServiceLbl.Location = new System.Drawing.Point(80, 142);
+            this.ServiceLbl.Location = new System.Drawing.Point(99, 129);
             this.ServiceLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ServiceLbl.Name = "ServiceLbl";
             this.ServiceLbl.Size = new System.Drawing.Size(113, 15);
@@ -82,7 +82,7 @@
             // 
             this.pickupChkBox.AutoSize = true;
             this.pickupChkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pickupChkBox.Location = new System.Drawing.Point(82, 166);
+            this.pickupChkBox.Location = new System.Drawing.Point(101, 153);
             this.pickupChkBox.Margin = new System.Windows.Forms.Padding(2);
             this.pickupChkBox.Name = "pickupChkBox";
             this.pickupChkBox.Size = new System.Drawing.Size(66, 19);
@@ -94,7 +94,7 @@
             // 
             this.DeliveryChkBox.AutoSize = true;
             this.DeliveryChkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeliveryChkBox.Location = new System.Drawing.Point(82, 188);
+            this.DeliveryChkBox.Location = new System.Drawing.Point(101, 175);
             this.DeliveryChkBox.Margin = new System.Windows.Forms.Padding(2);
             this.DeliveryChkBox.Name = "DeliveryChkBox";
             this.DeliveryChkBox.Size = new System.Drawing.Size(69, 19);
@@ -106,7 +106,7 @@
             // 
             this.SpecialChkBox.AutoSize = true;
             this.SpecialChkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpecialChkBox.Location = new System.Drawing.Point(82, 209);
+            this.SpecialChkBox.Location = new System.Drawing.Point(101, 196);
             this.SpecialChkBox.Margin = new System.Windows.Forms.Padding(2);
             this.SpecialChkBox.Name = "SpecialChkBox";
             this.SpecialChkBox.Size = new System.Drawing.Size(125, 19);
@@ -116,7 +116,7 @@
             // 
             // AddressTxtBox
             // 
-            this.AddressTxtBox.Location = new System.Drawing.Point(405, 182);
+            this.AddressTxtBox.Location = new System.Drawing.Point(424, 169);
             this.AddressTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddressTxtBox.Multiline = true;
             this.AddressTxtBox.Name = "AddressTxtBox";
@@ -126,7 +126,7 @@
             // AddressLbl
             // 
             this.AddressLbl.AutoSize = true;
-            this.AddressLbl.Location = new System.Drawing.Point(403, 166);
+            this.AddressLbl.Location = new System.Drawing.Point(422, 153);
             this.AddressLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AddressLbl.Name = "AddressLbl";
             this.AddressLbl.Size = new System.Drawing.Size(98, 13);
@@ -138,7 +138,7 @@
             this.DateLbl.AutoSize = true;
             this.DateLbl.BackColor = System.Drawing.Color.DarkGray;
             this.DateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLbl.Location = new System.Drawing.Point(83, 238);
+            this.DateLbl.Location = new System.Drawing.Point(102, 225);
             this.DateLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DateLbl.Name = "DateLbl";
             this.DateLbl.Size = new System.Drawing.Size(70, 15);
@@ -147,7 +147,7 @@
             // 
             // dateTimePickerOrder
             // 
-            this.dateTimePickerOrder.Location = new System.Drawing.Point(82, 253);
+            this.dateTimePickerOrder.Location = new System.Drawing.Point(101, 240);
             this.dateTimePickerOrder.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerOrder.Name = "dateTimePickerOrder";
             this.dateTimePickerOrder.Size = new System.Drawing.Size(184, 20);
@@ -195,7 +195,7 @@
             this.TimeSlotGpBox.Controls.Add(this.nightRB);
             this.TimeSlotGpBox.Controls.Add(this.eveningRB);
             this.TimeSlotGpBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeSlotGpBox.Location = new System.Drawing.Point(82, 287);
+            this.TimeSlotGpBox.Location = new System.Drawing.Point(101, 274);
             this.TimeSlotGpBox.Margin = new System.Windows.Forms.Padding(2);
             this.TimeSlotGpBox.Name = "TimeSlotGpBox";
             this.TimeSlotGpBox.Padding = new System.Windows.Forms.Padding(2);
@@ -208,7 +208,7 @@
             // 
             this.DetailsLbl.AutoSize = true;
             this.DetailsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DetailsLbl.Location = new System.Drawing.Point(403, 142);
+            this.DetailsLbl.Location = new System.Drawing.Point(422, 129);
             this.DetailsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DetailsLbl.Name = "DetailsLbl";
             this.DetailsLbl.Size = new System.Drawing.Size(97, 15);
@@ -221,7 +221,7 @@
             this.paymentGrpBox.Controls.Add(this.OnlineRB);
             this.paymentGrpBox.Controls.Add(this.CodRB);
             this.paymentGrpBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentGrpBox.Location = new System.Drawing.Point(82, 391);
+            this.paymentGrpBox.Location = new System.Drawing.Point(101, 378);
             this.paymentGrpBox.Margin = new System.Windows.Forms.Padding(2);
             this.paymentGrpBox.Name = "paymentGrpBox";
             this.paymentGrpBox.Padding = new System.Windows.Forms.Padding(2);
@@ -269,7 +269,7 @@
             // instructionsLbl
             // 
             this.instructionsLbl.AutoSize = true;
-            this.instructionsLbl.Location = new System.Drawing.Point(403, 271);
+            this.instructionsLbl.Location = new System.Drawing.Point(422, 258);
             this.instructionsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.instructionsLbl.Name = "instructionsLbl";
             this.instructionsLbl.Size = new System.Drawing.Size(139, 13);
@@ -280,7 +280,7 @@
             // 
             this.SpecialLbl.AutoSize = true;
             this.SpecialLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpecialLbl.Location = new System.Drawing.Point(403, 253);
+            this.SpecialLbl.Location = new System.Drawing.Point(422, 240);
             this.SpecialLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SpecialLbl.Name = "SpecialLbl";
             this.SpecialLbl.Size = new System.Drawing.Size(106, 15);
@@ -289,7 +289,7 @@
             // 
             // InstructionsTxt
             // 
-            this.InstructionsTxt.Location = new System.Drawing.Point(405, 287);
+            this.InstructionsTxt.Location = new System.Drawing.Point(424, 274);
             this.InstructionsTxt.Margin = new System.Windows.Forms.Padding(2);
             this.InstructionsTxt.Multiline = true;
             this.InstructionsTxt.Name = "InstructionsTxt";
@@ -299,7 +299,7 @@
             // SubmitBtn
             // 
             this.SubmitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitBtn.Location = new System.Drawing.Point(717, 456);
+            this.SubmitBtn.Location = new System.Drawing.Point(726, 453);
             this.SubmitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitBtn.Name = "SubmitBtn";
             this.SubmitBtn.Size = new System.Drawing.Size(86, 36);
@@ -311,7 +311,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(607, 457);
+            this.btnBack.Location = new System.Drawing.Point(616, 454);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(85, 36);
             this.btnBack.TabIndex = 21;
@@ -324,7 +324,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(858, 515);
+            this.ClientSize = new System.Drawing.Size(834, 511);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.SubmitBtn);
             this.Controls.Add(this.InstructionsTxt);

@@ -38,16 +38,16 @@
             // 
             this.dgvReservations.BackgroundColor = System.Drawing.Color.White;
             this.dgvReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservations.Location = new System.Drawing.Point(32, 93);
+            this.dgvReservations.Location = new System.Drawing.Point(32, 86);
             this.dgvReservations.Name = "dgvReservations";
-            this.dgvReservations.Size = new System.Drawing.Size(734, 279);
+            this.dgvReservations.Size = new System.Drawing.Size(925, 379);
             this.dgvReservations.TabIndex = 0;
             // 
             // nothing
             // 
             this.nothing.AutoSize = true;
             this.nothing.Font = new System.Drawing.Font("Showcard Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nothing.Location = new System.Drawing.Point(194, 23);
+            this.nothing.Location = new System.Drawing.Point(293, 22);
             this.nothing.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nothing.Name = "nothing";
             this.nothing.Size = new System.Drawing.Size(425, 47);
@@ -57,7 +57,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(681, 393);
+            this.btnBack.Location = new System.Drawing.Point(872, 484);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(85, 36);
             this.btnBack.TabIndex = 22;
@@ -70,7 +70,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.nothing);
             this.Controls.Add(this.dgvReservations);

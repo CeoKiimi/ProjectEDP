@@ -10,28 +10,25 @@ using System.Windows.Forms;
 
 namespace ProjectEDP
 {
-    public partial class Homepage : Form
+    public partial class AdminHomepage : Form
     {
-        public Homepage()
+        public AdminHomepage()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void manageReservationBtn_Click(object sender, EventArgs e)
         {
-
+            AdminDashboardPage form = new AdminDashboardPage();
+            form.Show();
+            this.Hide();
         }
 
-        private void ReserveBtn_Click(object sender, EventArgs e)
+        private void manageOrderBtn_Click(object sender, EventArgs e)
         {
-            CustomerDashboard form = new CustomerDashboard();
+            AdminOrderPage form = new AdminOrderPage();
             form.Show();
-        }
-
-        private void reserveListbtn_Click(object sender, EventArgs e)
-        {
-            CustomerReservationPage form = new CustomerReservationPage();
-            form.Show();
+            this.Hide();
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)

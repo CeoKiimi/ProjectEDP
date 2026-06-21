@@ -145,7 +145,7 @@ namespace ProjectEDP
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            AdminDashboardPage form = new AdminDashboardPage();
+            AdminHomepage form = new AdminHomepage();
             form.Show();
             this.Hide();
         }

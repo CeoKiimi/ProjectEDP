@@ -34,6 +34,7 @@
             this.btnApprove = new System.Windows.Forms.Button();
             this.btnReject = new System.Windows.Forms.Button();
             this.btnViewOrders = new System.Windows.Forms.Button();
+            this.bckBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdminReservations)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,12 +106,24 @@
             this.btnViewOrders.UseVisualStyleBackColor = true;
             this.btnViewOrders.Click += new System.EventHandler(this.btnViewOrders_Click);
             // 
+            // bckBtn
+            // 
+            this.bckBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bckBtn.Location = new System.Drawing.Point(35, 36);
+            this.bckBtn.Name = "bckBtn";
+            this.bckBtn.Size = new System.Drawing.Size(91, 37);
+            this.bckBtn.TabIndex = 7;
+            this.bckBtn.Text = "Back";
+            this.bckBtn.UseVisualStyleBackColor = true;
+            this.bckBtn.Click += new System.EventHandler(this.bckBtn_Click);
+            // 
             // AdminDashboardPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.bckBtn);
             this.Controls.Add(this.btnViewOrders);
             this.Controls.Add(this.btnReject);
             this.Controls.Add(this.btnApprove);
@@ -135,5 +148,6 @@
         private System.Windows.Forms.Button btnApprove;
         private System.Windows.Forms.Button btnReject;
         private System.Windows.Forms.Button btnViewOrders;
+        private System.Windows.Forms.Button bckBtn;
     }
 }

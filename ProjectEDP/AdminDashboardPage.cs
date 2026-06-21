@@ -245,5 +245,12 @@ namespace ProjectEDP
             form.Show();
             this.Hide();
         }
+
+        private void bckBtn_Click(object sender, EventArgs e)
+        {
+            AdminHomepage form = new AdminHomepage();
+            form.Show();
+            this.Hide();
+        }
     }
 }

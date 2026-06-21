@@ -39,7 +39,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(443, 503);
+            this.btnBack.Location = new System.Drawing.Point(33, 36);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(91, 37);
             this.btnBack.TabIndex = 10;

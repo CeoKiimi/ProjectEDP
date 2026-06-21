@@ -56,58 +56,63 @@ namespace ProjectEDP
                     con.Open();
 
                     //admin
-                    string adminQuery = @"SELECT COUNT(*) 
-                                          FROM Admin 
-                                          WHERE adminName = @Username 
-                                          AND [password] = @Password";
+                    string adminQuery = @"SELECT adminID, adminName
+                      FROM Admin
+                      WHERE adminName = @Username
+                      AND [password] = @Password";
 
                     using (SqlCommand adminCmd = new SqlCommand(adminQuery, con))
                     {
                         adminCmd.Parameters.AddWithValue("@Username", usernameOrEmail);
                         adminCmd.Parameters.AddWithValue("@Password", password);
 
-                        int adminCount = (int)adminCmd.ExecuteScalar();
-
-                        if (adminCount > 0)
-                        {
-                            MessageBox.Show("Admin login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            AdminDashboardPage adminForm = new AdminDashboardPage();
-                            adminForm.Show();
-                            this.Hide();
-                            return;
-                        }
-                    }
-
-                    //customer
-                    string customerQuery = @"SELECT customerID, custName 
-                         FROM Customer 
-                         WHERE custEmail = @Email 
-                         AND [password] = @Password";
-
-                    using (SqlCommand customerCmd = new SqlCommand(customerQuery, con))
-                    {
-                        customerCmd.Parameters.AddWithValue("@Email", usernameOrEmail);
-                        customerCmd.Parameters.AddWithValue("@Password", password);
-
-                        using (SqlDataReader reader = customerCmd.ExecuteReader())
+                        using (SqlDataReader reader = adminCmd.ExecuteReader())
                         {
                             if (reader.Read())
                             {
-                                CurrentUser.CustomerID = Convert.ToInt32(reader["customerID"]);
-                                CurrentUser.CustomerName = reader["custName"].ToString();
+                                CurrentUser.AdminID = Convert.ToInt32(reader["adminID"]);
+                                CurrentUser.AdminName = reader["adminName"].ToString();
+                                CurrentUser.IsAdmin = true;
 
-                                MessageBox.Show("Customer login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Welcome Admin, " + CurrentUser.AdminName + "!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                Homepage form = new Homepage();
+                                AdminHomepage form = new AdminHomepage();
                                 form.Show();
                                 this.Hide();
                                 return;
                             }
                         }
-                    }
 
-                    MessageBox.Show("Account not found. Please register first, or check your password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //customer
+                        string customerQuery = @"SELECT customerID, custName 
+                         FROM Customer 
+                         WHERE custEmail = @Email 
+                         AND [password] = @Password";
+
+                        using (SqlCommand customerCmd = new SqlCommand(customerQuery, con))
+                        {
+                            customerCmd.Parameters.AddWithValue("@Email", usernameOrEmail);
+                            customerCmd.Parameters.AddWithValue("@Password", password);
+
+                            using (SqlDataReader reader = customerCmd.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    CurrentUser.CustomerID = Convert.ToInt32(reader["customerID"]);
+                                    CurrentUser.CustomerName = reader["custName"].ToString();
+
+                                    MessageBox.Show("Customer login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    Homepage form = new Homepage();
+                                    form.Show();
+                                    this.Hide();
+                                    return;
+                                }
+                            }
+                        }
+
+                        MessageBox.Show("Account not found. Please register first, or check your password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)

@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ReserveBtn = new System.Windows.Forms.Button();
             this.reserveListbtn = new System.Windows.Forms.Button();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // welcomeLbl
@@ -83,6 +84,19 @@
             this.reserveListbtn.UseVisualStyleBackColor = false;
             this.reserveListbtn.Click += new System.EventHandler(this.reserveListbtn_Click);
             // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackColor = System.Drawing.Color.CadetBlue;
+            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.Location = new System.Drawing.Point(11, 464);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(116, 36);
+            this.logoutBtn.TabIndex = 4;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,6 +105,7 @@
             this.BackgroundImage = global::ProjectEDP.Properties.Resources.laundry2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(834, 511);
+            this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.reserveListbtn);
             this.Controls.Add(this.ReserveBtn);
             this.Controls.Add(this.label1);
@@ -109,5 +124,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ReserveBtn;
         private System.Windows.Forms.Button reserveListbtn;
+        private System.Windows.Forms.Button logoutBtn;
     }
 }

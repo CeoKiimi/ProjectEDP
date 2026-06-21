@@ -69,6 +69,12 @@
     <Compile Include="AdminDashboardPage.Designer.cs">
       <DependentUpon>AdminDashboardPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminHomepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHomepage.Designer.cs">
+      <DependentUpon>AdminHomepage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminOrderPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminDashboardPage.resx">
       <DependentUpon>AdminDashboardPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminHomepage.resx">
+      <DependentUpon>AdminHomepage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminOrderPage.resx">
       <DependentUpon>AdminOrderPage.cs</DependentUpon>

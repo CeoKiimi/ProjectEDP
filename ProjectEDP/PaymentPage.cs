@@ -13,7 +13,7 @@ namespace ProjectEDP
 {
     public partial class PaymentPage : Form
     {
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Documents\TEST\ProjectEDP\ProjectEDP\EasyLaundry.mdf;Integrated Security=True;Connect Timeout=30";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\EasyLaundry.mdf;Integrated Security=True;Connect Timeout=30";
 
         private int reservationID;
         private int orderID;

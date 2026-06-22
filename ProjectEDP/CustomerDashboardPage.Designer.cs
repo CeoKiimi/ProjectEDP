@@ -54,6 +54,7 @@
             this.chkSensitiveSkin = new System.Windows.Forms.CheckBox();
             this.chkFolding = new System.Windows.Forms.CheckBox();
             this.chkSameDayDelivery = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.TimeSlotGpBox.SuspendLayout();
             this.paymentGrpBox.SuspendLayout();
             this.grpSpecialtyOptions.SuspendLayout();
@@ -64,7 +65,7 @@
             this.reserveLbl.AutoSize = true;
             this.reserveLbl.Font = new System.Drawing.Font("Showcard Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reserveLbl.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.reserveLbl.Location = new System.Drawing.Point(129, 67);
+            this.reserveLbl.Location = new System.Drawing.Point(109, 68);
             this.reserveLbl.Name = "reserveLbl";
             this.reserveLbl.Size = new System.Drawing.Size(509, 59);
             this.reserveLbl.TabIndex = 0;
@@ -88,10 +89,11 @@
             this.pickupChkBox.Location = new System.Drawing.Point(135, 188);
             this.pickupChkBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pickupChkBox.Name = "pickupChkBox";
-            this.pickupChkBox.Size = new System.Drawing.Size(79, 22);
+            this.pickupChkBox.Size = new System.Drawing.Size(103, 22);
             this.pickupChkBox.TabIndex = 2;
-            this.pickupChkBox.Text = "Pickup ";
+            this.pickupChkBox.Text = "Wash Only";
             this.pickupChkBox.UseVisualStyleBackColor = true;
+            this.pickupChkBox.CheckedChanged += new System.EventHandler(this.pickupChkBox_CheckedChanged_1);
             this.pickupChkBox.Click += new System.EventHandler(this.pickupChkBox_CheckedChanged);
             // 
             // DeliveryChkBox
@@ -101,9 +103,9 @@
             this.DeliveryChkBox.Location = new System.Drawing.Point(135, 215);
             this.DeliveryChkBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeliveryChkBox.Name = "DeliveryChkBox";
-            this.DeliveryChkBox.Size = new System.Drawing.Size(82, 22);
+            this.DeliveryChkBox.Size = new System.Drawing.Size(124, 22);
             this.DeliveryChkBox.TabIndex = 3;
-            this.DeliveryChkBox.Text = "Delivery";
+            this.DeliveryChkBox.Text = "Wash and Dry";
             this.DeliveryChkBox.UseVisualStyleBackColor = true;
             this.DeliveryChkBox.Click += new System.EventHandler(this.DeliveryChkBox_CheckedChanged);
             // 
@@ -286,7 +288,7 @@
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(821, 559);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(113, 44);
             this.btnBack.TabIndex = 21;
@@ -313,9 +315,9 @@
             this.grpSpecialtyOptions.Controls.Add(this.chkFolding);
             this.grpSpecialtyOptions.Controls.Add(this.chkSameDayDelivery);
             this.grpSpecialtyOptions.Location = new System.Drawing.Point(573, 295);
-            this.grpSpecialtyOptions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpSpecialtyOptions.Margin = new System.Windows.Forms.Padding(4);
             this.grpSpecialtyOptions.Name = "grpSpecialtyOptions";
-            this.grpSpecialtyOptions.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpSpecialtyOptions.Padding = new System.Windows.Forms.Padding(4);
             this.grpSpecialtyOptions.Size = new System.Drawing.Size(295, 155);
             this.grpSpecialtyOptions.TabIndex = 23;
             this.grpSpecialtyOptions.TabStop = false;
@@ -327,7 +329,7 @@
             // 
             this.chkDryCleaning.AutoSize = true;
             this.chkDryCleaning.Location = new System.Drawing.Point(0, 119);
-            this.chkDryCleaning.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkDryCleaning.Margin = new System.Windows.Forms.Padding(4);
             this.chkDryCleaning.Name = "chkDryCleaning";
             this.chkDryCleaning.Size = new System.Drawing.Size(152, 20);
             this.chkDryCleaning.TabIndex = 1;
@@ -338,7 +340,7 @@
             // chkSensitiveSkin
             // 
             this.chkSensitiveSkin.Location = new System.Drawing.Point(1, 84);
-            this.chkSensitiveSkin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkSensitiveSkin.Margin = new System.Windows.Forms.Padding(4);
             this.chkSensitiveSkin.Name = "chkSensitiveSkin";
             this.chkSensitiveSkin.Size = new System.Drawing.Size(272, 28);
             this.chkSensitiveSkin.TabIndex = 0;
@@ -349,24 +351,34 @@
             // chkFolding
             // 
             this.chkFolding.Location = new System.Drawing.Point(0, 54);
-            this.chkFolding.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkFolding.Margin = new System.Windows.Forms.Padding(4);
             this.chkFolding.Name = "chkFolding";
             this.chkFolding.Size = new System.Drawing.Size(184, 22);
             this.chkFolding.TabIndex = 0;
-            this.chkFolding.Text = "Folding (RM10)";
+            this.chkFolding.Text = "Folding (RM5)";
             this.chkFolding.UseVisualStyleBackColor = true;
             this.chkFolding.CheckedChanged += new System.EventHandler(this.chkFolding_CheckedChanged);
             // 
             // chkSameDayDelivery
             // 
             this.chkSameDayDelivery.Location = new System.Drawing.Point(0, 25);
-            this.chkSameDayDelivery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkSameDayDelivery.Margin = new System.Windows.Forms.Padding(4);
             this.chkSameDayDelivery.Name = "chkSameDayDelivery";
             this.chkSameDayDelivery.Size = new System.Drawing.Size(216, 22);
             this.chkSameDayDelivery.TabIndex = 0;
-            this.chkSameDayDelivery.Text = "Same Day Delivery (RM10)";
+            this.chkSameDayDelivery.Text = "Same Day Delivery (RM5)";
             this.chkSameDayDelivery.UseVisualStyleBackColor = true;
             this.chkSameDayDelivery.CheckedChanged += new System.EventHandler(this.chkSameDayDelivery_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(591, 508);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(166, 16);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Delivery charge is RM 3.00";
             // 
             // CustomerDashboard
             // 
@@ -374,6 +386,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(177)))), ((int)(((byte)(214)))));
             this.ClientSize = new System.Drawing.Size(1112, 629);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.grpSpecialtyOptions);
             this.Controls.Add(this.lblTotalAmount);
             this.Controls.Add(this.btnBack);
@@ -390,9 +403,10 @@
             this.Controls.Add(this.pickupChkBox);
             this.Controls.Add(this.ServiceLbl);
             this.Controls.Add(this.reserveLbl);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CustomerDashboard";
             this.Text = "Customer Dashboard";
+            this.Load += new System.EventHandler(this.CustomerDashboard_Load);
             this.TimeSlotGpBox.ResumeLayout(false);
             this.TimeSlotGpBox.PerformLayout();
             this.paymentGrpBox.ResumeLayout(false);
@@ -432,5 +446,6 @@
         private System.Windows.Forms.CheckBox chkFolding;
         private System.Windows.Forms.CheckBox chkSameDayDelivery;
         private System.Windows.Forms.CheckBox chkDryCleaning;
+        private System.Windows.Forms.Label label1;
     }
 }

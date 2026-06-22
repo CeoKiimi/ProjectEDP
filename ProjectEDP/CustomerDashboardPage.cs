@@ -25,12 +25,12 @@ namespace ProjectEDP
 
             if (pickupChkBox.Checked)
             {
-                services.Add("Pickup");
+                services.Add("Wash Only");
             }
 
             if (DeliveryChkBox.Checked)
             {
-                services.Add("Delivery");
+                services.Add("Wash and Dry");
             }
 
             if (SpecialChkBox.Checked)
@@ -121,10 +121,11 @@ namespace ProjectEDP
 
         private void UpdateTotalAmount()
         {
+            
             try
             {
-                decimal totalAmount = CalculateTotalAmount();
-                lblTotalAmount.Text = "TOTAL AMOUNT: RM " + totalAmount.ToString("0.00");
+                decimal totalAmount = CalculateTotalAmount() + 3.00m;
+                lblTotalAmount.Text = $"TOTAL AMOUNT: RM {totalAmount:0.00}";
             }
             catch (Exception ex)
             {
@@ -315,7 +316,19 @@ namespace ProjectEDP
         {
 
         }
+        private void dateTimePickerOrder_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePickerOrder.MinDate = DateTime.Today.AddDays(1);
+        }
 
-        
+        private void pickupChkBox_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CustomerDashboard_Load(object sender, EventArgs e)
+        {
+            lblTotalAmount.Text = "TOTAL AMOUNT: RM 0.00";
+        }
     }
 }

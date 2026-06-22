@@ -153,6 +153,7 @@ namespace ProjectEDP
                 chkFolding.Checked = false;
                 chkSensitiveSkin.Checked = false;
                 chkDryCleaning.Checked = false;
+                
             }
 
             UpdateTotalAmount();
@@ -304,10 +305,6 @@ namespace ProjectEDP
 
         }
 
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void grpSpecialtyOptions_Enter(object sender, EventArgs e)
         {
@@ -318,5 +315,7 @@ namespace ProjectEDP
         {
 
         }
+
+        
     }
 }

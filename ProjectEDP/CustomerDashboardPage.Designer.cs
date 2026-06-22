@@ -63,10 +63,10 @@
             // 
             this.reserveLbl.AutoSize = true;
             this.reserveLbl.Font = new System.Drawing.Font("Showcard Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reserveLbl.Location = new System.Drawing.Point(224, 23);
-            this.reserveLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.reserveLbl.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.reserveLbl.Location = new System.Drawing.Point(129, 67);
             this.reserveLbl.Name = "reserveLbl";
-            this.reserveLbl.Size = new System.Drawing.Size(411, 47);
+            this.reserveLbl.Size = new System.Drawing.Size(509, 59);
             this.reserveLbl.TabIndex = 0;
             this.reserveLbl.Text = "Make A Reservation";
             this.reserveLbl.Click += new System.EventHandler(this.reserveLbl_Click);
@@ -75,10 +75,9 @@
             // 
             this.ServiceLbl.AutoSize = true;
             this.ServiceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ServiceLbl.Location = new System.Drawing.Point(99, 129);
-            this.ServiceLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ServiceLbl.Location = new System.Drawing.Point(132, 159);
             this.ServiceLbl.Name = "ServiceLbl";
-            this.ServiceLbl.Size = new System.Drawing.Size(113, 15);
+            this.ServiceLbl.Size = new System.Drawing.Size(138, 18);
             this.ServiceLbl.TabIndex = 1;
             this.ServiceLbl.Text = "Select Service Type";
             // 
@@ -86,10 +85,10 @@
             // 
             this.pickupChkBox.AutoSize = true;
             this.pickupChkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pickupChkBox.Location = new System.Drawing.Point(101, 153);
-            this.pickupChkBox.Margin = new System.Windows.Forms.Padding(2);
+            this.pickupChkBox.Location = new System.Drawing.Point(135, 188);
+            this.pickupChkBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pickupChkBox.Name = "pickupChkBox";
-            this.pickupChkBox.Size = new System.Drawing.Size(66, 19);
+            this.pickupChkBox.Size = new System.Drawing.Size(79, 22);
             this.pickupChkBox.TabIndex = 2;
             this.pickupChkBox.Text = "Pickup ";
             this.pickupChkBox.UseVisualStyleBackColor = true;
@@ -99,10 +98,10 @@
             // 
             this.DeliveryChkBox.AutoSize = true;
             this.DeliveryChkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeliveryChkBox.Location = new System.Drawing.Point(101, 175);
-            this.DeliveryChkBox.Margin = new System.Windows.Forms.Padding(2);
+            this.DeliveryChkBox.Location = new System.Drawing.Point(135, 215);
+            this.DeliveryChkBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeliveryChkBox.Name = "DeliveryChkBox";
-            this.DeliveryChkBox.Size = new System.Drawing.Size(69, 19);
+            this.DeliveryChkBox.Size = new System.Drawing.Size(82, 22);
             this.DeliveryChkBox.TabIndex = 3;
             this.DeliveryChkBox.Text = "Delivery";
             this.DeliveryChkBox.UseVisualStyleBackColor = true;
@@ -112,10 +111,10 @@
             // 
             this.SpecialChkBox.AutoSize = true;
             this.SpecialChkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpecialChkBox.Location = new System.Drawing.Point(101, 196);
-            this.SpecialChkBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SpecialChkBox.Location = new System.Drawing.Point(135, 241);
+            this.SpecialChkBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SpecialChkBox.Name = "SpecialChkBox";
-            this.SpecialChkBox.Size = new System.Drawing.Size(125, 19);
+            this.SpecialChkBox.Size = new System.Drawing.Size(148, 22);
             this.SpecialChkBox.TabIndex = 4;
             this.SpecialChkBox.Text = "Speciality Laundry";
             this.SpecialChkBox.UseVisualStyleBackColor = true;
@@ -123,50 +122,49 @@
             // 
             // AddressTxtBox
             // 
-            this.AddressTxtBox.Location = new System.Drawing.Point(432, 169);
-            this.AddressTxtBox.Margin = new System.Windows.Forms.Padding(2);
+            this.AddressTxtBox.Location = new System.Drawing.Point(576, 208);
+            this.AddressTxtBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddressTxtBox.Multiline = true;
             this.AddressTxtBox.Name = "AddressTxtBox";
-            this.AddressTxtBox.Size = new System.Drawing.Size(198, 48);
+            this.AddressTxtBox.Size = new System.Drawing.Size(263, 58);
             this.AddressTxtBox.TabIndex = 5;
             // 
             // AddressLbl
             // 
             this.AddressLbl.AutoSize = true;
-            this.AddressLbl.Location = new System.Drawing.Point(430, 153);
-            this.AddressLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AddressLbl.Location = new System.Drawing.Point(573, 188);
             this.AddressLbl.Name = "AddressLbl";
-            this.AddressLbl.Size = new System.Drawing.Size(98, 13);
+            this.AddressLbl.Size = new System.Drawing.Size(123, 16);
             this.AddressLbl.TabIndex = 6;
             this.AddressLbl.Text = "Enter Your Address";
             // 
             // DateLbl
             // 
             this.DateLbl.AutoSize = true;
-            this.DateLbl.BackColor = System.Drawing.Color.DarkGray;
+            this.DateLbl.BackColor = System.Drawing.Color.Transparent;
             this.DateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLbl.Location = new System.Drawing.Point(102, 225);
-            this.DateLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DateLbl.Location = new System.Drawing.Point(136, 277);
             this.DateLbl.Name = "DateLbl";
-            this.DateLbl.Size = new System.Drawing.Size(70, 15);
+            this.DateLbl.Size = new System.Drawing.Size(84, 18);
             this.DateLbl.TabIndex = 7;
             this.DateLbl.Text = "Select Date";
             // 
             // dateTimePickerOrder
             // 
-            this.dateTimePickerOrder.Location = new System.Drawing.Point(101, 240);
-            this.dateTimePickerOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerOrder.Location = new System.Drawing.Point(135, 295);
+            this.dateTimePickerOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerOrder.Name = "dateTimePickerOrder";
-            this.dateTimePickerOrder.Size = new System.Drawing.Size(184, 20);
+            this.dateTimePickerOrder.Size = new System.Drawing.Size(244, 22);
             this.dateTimePickerOrder.TabIndex = 8;
+            this.dateTimePickerOrder.ValueChanged += new System.EventHandler(this.dateTimePickerOrder_ValueChanged);
             // 
             // morningRB
             // 
             this.morningRB.AutoSize = true;
-            this.morningRB.Location = new System.Drawing.Point(4, 17);
-            this.morningRB.Margin = new System.Windows.Forms.Padding(2);
+            this.morningRB.Location = new System.Drawing.Point(5, 21);
+            this.morningRB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.morningRB.Name = "morningRB";
-            this.morningRB.Size = new System.Drawing.Size(111, 19);
+            this.morningRB.Size = new System.Drawing.Size(132, 22);
             this.morningRB.TabIndex = 10;
             this.morningRB.TabStop = true;
             this.morningRB.Text = "8:00 - 11:00 AM";
@@ -175,10 +173,10 @@
             // eveningRB
             // 
             this.eveningRB.AutoSize = true;
-            this.eveningRB.Location = new System.Drawing.Point(4, 38);
-            this.eveningRB.Margin = new System.Windows.Forms.Padding(2);
+            this.eveningRB.Location = new System.Drawing.Point(5, 47);
+            this.eveningRB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.eveningRB.Name = "eveningRB";
-            this.eveningRB.Size = new System.Drawing.Size(119, 19);
+            this.eveningRB.Size = new System.Drawing.Size(141, 22);
             this.eveningRB.TabIndex = 11;
             this.eveningRB.TabStop = true;
             this.eveningRB.Text = "12:00 - 14:00 PM";
@@ -187,10 +185,10 @@
             // nightRB
             // 
             this.nightRB.AutoSize = true;
-            this.nightRB.Location = new System.Drawing.Point(4, 59);
-            this.nightRB.Margin = new System.Windows.Forms.Padding(2);
+            this.nightRB.Location = new System.Drawing.Point(5, 73);
+            this.nightRB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nightRB.Name = "nightRB";
-            this.nightRB.Size = new System.Drawing.Size(119, 19);
+            this.nightRB.Size = new System.Drawing.Size(141, 22);
             this.nightRB.TabIndex = 12;
             this.nightRB.TabStop = true;
             this.nightRB.Text = "16:00 - 20:00 PM";
@@ -202,11 +200,11 @@
             this.TimeSlotGpBox.Controls.Add(this.nightRB);
             this.TimeSlotGpBox.Controls.Add(this.eveningRB);
             this.TimeSlotGpBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TimeSlotGpBox.Location = new System.Drawing.Point(101, 274);
-            this.TimeSlotGpBox.Margin = new System.Windows.Forms.Padding(2);
+            this.TimeSlotGpBox.Location = new System.Drawing.Point(135, 337);
+            this.TimeSlotGpBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TimeSlotGpBox.Name = "TimeSlotGpBox";
-            this.TimeSlotGpBox.Padding = new System.Windows.Forms.Padding(2);
-            this.TimeSlotGpBox.Size = new System.Drawing.Size(150, 81);
+            this.TimeSlotGpBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TimeSlotGpBox.Size = new System.Drawing.Size(200, 100);
             this.TimeSlotGpBox.TabIndex = 13;
             this.TimeSlotGpBox.TabStop = false;
             this.TimeSlotGpBox.Text = "Pick Time Slot";
@@ -215,10 +213,9 @@
             // 
             this.DetailsLbl.AutoSize = true;
             this.DetailsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DetailsLbl.Location = new System.Drawing.Point(430, 129);
-            this.DetailsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DetailsLbl.Location = new System.Drawing.Point(573, 159);
             this.DetailsLbl.Name = "DetailsLbl";
-            this.DetailsLbl.Size = new System.Drawing.Size(97, 15);
+            this.DetailsLbl.Size = new System.Drawing.Size(117, 18);
             this.DetailsLbl.TabIndex = 14;
             this.DetailsLbl.Text = "Delivery Details :";
             // 
@@ -228,11 +225,11 @@
             this.paymentGrpBox.Controls.Add(this.OnlineRB);
             this.paymentGrpBox.Controls.Add(this.CodRB);
             this.paymentGrpBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paymentGrpBox.Location = new System.Drawing.Point(101, 378);
-            this.paymentGrpBox.Margin = new System.Windows.Forms.Padding(2);
+            this.paymentGrpBox.Location = new System.Drawing.Point(135, 465);
+            this.paymentGrpBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.paymentGrpBox.Name = "paymentGrpBox";
-            this.paymentGrpBox.Padding = new System.Windows.Forms.Padding(2);
-            this.paymentGrpBox.Size = new System.Drawing.Size(309, 39);
+            this.paymentGrpBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.paymentGrpBox.Size = new System.Drawing.Size(412, 48);
             this.paymentGrpBox.TabIndex = 16;
             this.paymentGrpBox.TabStop = false;
             this.paymentGrpBox.Text = "Select Payment Method";
@@ -240,10 +237,10 @@
             // CardRB
             // 
             this.CardRB.AutoSize = true;
-            this.CardRB.Location = new System.Drawing.Point(191, 18);
-            this.CardRB.Margin = new System.Windows.Forms.Padding(2);
+            this.CardRB.Location = new System.Drawing.Point(255, 22);
+            this.CardRB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CardRB.Name = "CardRB";
-            this.CardRB.Size = new System.Drawing.Size(118, 19);
+            this.CardRB.Size = new System.Drawing.Size(142, 22);
             this.CardRB.TabIndex = 2;
             this.CardRB.TabStop = true;
             this.CardRB.Text = "Card Credit/Debit";
@@ -252,10 +249,10 @@
             // OnlineRB
             // 
             this.OnlineRB.AutoSize = true;
-            this.OnlineRB.Location = new System.Drawing.Point(57, 17);
-            this.OnlineRB.Margin = new System.Windows.Forms.Padding(2);
+            this.OnlineRB.Location = new System.Drawing.Point(81, 21);
+            this.OnlineRB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OnlineRB.Name = "OnlineRB";
-            this.OnlineRB.Size = new System.Drawing.Size(135, 19);
+            this.OnlineRB.Size = new System.Drawing.Size(161, 22);
             this.OnlineRB.TabIndex = 1;
             this.OnlineRB.TabStop = true;
             this.OnlineRB.Text = "FPX Online Banking";
@@ -264,10 +261,10 @@
             // CodRB
             // 
             this.CodRB.AutoSize = true;
-            this.CodRB.Location = new System.Drawing.Point(4, 18);
-            this.CodRB.Margin = new System.Windows.Forms.Padding(2);
+            this.CodRB.Location = new System.Drawing.Point(5, 22);
+            this.CodRB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CodRB.Name = "CodRB";
-            this.CodRB.Size = new System.Drawing.Size(53, 19);
+            this.CodRB.Size = new System.Drawing.Size(64, 22);
             this.CodRB.TabIndex = 0;
             this.CodRB.TabStop = true;
             this.CodRB.Text = "Cash";
@@ -276,10 +273,10 @@
             // SubmitBtn
             // 
             this.SubmitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitBtn.Location = new System.Drawing.Point(726, 453);
-            this.SubmitBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.SubmitBtn.Location = new System.Drawing.Point(968, 558);
+            this.SubmitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SubmitBtn.Name = "SubmitBtn";
-            this.SubmitBtn.Size = new System.Drawing.Size(86, 36);
+            this.SubmitBtn.Size = new System.Drawing.Size(115, 44);
             this.SubmitBtn.TabIndex = 20;
             this.SubmitBtn.Text = "Submit";
             this.SubmitBtn.UseVisualStyleBackColor = true;
@@ -288,9 +285,10 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(616, 454);
+            this.btnBack.Location = new System.Drawing.Point(821, 559);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(85, 36);
+            this.btnBack.Size = new System.Drawing.Size(113, 44);
             this.btnBack.TabIndex = 21;
             this.btnBack.Text = "BACK";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -300,9 +298,10 @@
             // 
             this.lblTotalAmount.AutoSize = true;
             this.lblTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAmount.Location = new System.Drawing.Point(441, 369);
+            this.lblTotalAmount.Location = new System.Drawing.Point(582, 477);
+            this.lblTotalAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalAmount.Name = "lblTotalAmount";
-            this.lblTotalAmount.Size = new System.Drawing.Size(210, 25);
+            this.lblTotalAmount.Size = new System.Drawing.Size(264, 31);
             this.lblTotalAmount.TabIndex = 22;
             this.lblTotalAmount.Text = "TOTAL AMOUNT:  ";
             this.lblTotalAmount.Click += new System.EventHandler(this.lblTotalAmount_Click);
@@ -313,9 +312,11 @@
             this.grpSpecialtyOptions.Controls.Add(this.chkSensitiveSkin);
             this.grpSpecialtyOptions.Controls.Add(this.chkFolding);
             this.grpSpecialtyOptions.Controls.Add(this.chkSameDayDelivery);
-            this.grpSpecialtyOptions.Location = new System.Drawing.Point(430, 240);
+            this.grpSpecialtyOptions.Location = new System.Drawing.Point(573, 295);
+            this.grpSpecialtyOptions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpSpecialtyOptions.Name = "grpSpecialtyOptions";
-            this.grpSpecialtyOptions.Size = new System.Drawing.Size(221, 115);
+            this.grpSpecialtyOptions.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpSpecialtyOptions.Size = new System.Drawing.Size(295, 155);
             this.grpSpecialtyOptions.TabIndex = 23;
             this.grpSpecialtyOptions.TabStop = false;
             this.grpSpecialtyOptions.Text = "Specialty Options";
@@ -325,20 +326,21 @@
             // chkDryCleaning
             // 
             this.chkDryCleaning.AutoSize = true;
-            this.chkDryCleaning.Location = new System.Drawing.Point(0, 97);
+            this.chkDryCleaning.Location = new System.Drawing.Point(0, 119);
+            this.chkDryCleaning.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkDryCleaning.Name = "chkDryCleaning";
-            this.chkDryCleaning.Size = new System.Drawing.Size(124, 17);
+            this.chkDryCleaning.Size = new System.Drawing.Size(152, 20);
             this.chkDryCleaning.TabIndex = 1;
             this.chkDryCleaning.Text = "Dry Cleaning (RM20)";
             this.chkDryCleaning.UseVisualStyleBackColor = true;
-            this.chkDryCleaning.Visible = false;
             this.chkDryCleaning.CheckedChanged += new System.EventHandler(this.chkDryCleaning_CheckedChanged);
             // 
             // chkSensitiveSkin
             // 
-            this.chkSensitiveSkin.Location = new System.Drawing.Point(1, 68);
+            this.chkSensitiveSkin.Location = new System.Drawing.Point(1, 84);
+            this.chkSensitiveSkin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkSensitiveSkin.Name = "chkSensitiveSkin";
-            this.chkSensitiveSkin.Size = new System.Drawing.Size(204, 23);
+            this.chkSensitiveSkin.Size = new System.Drawing.Size(272, 28);
             this.chkSensitiveSkin.TabIndex = 0;
             this.chkSensitiveSkin.Text = "Sensitive Skin Laundry Care (RM20)";
             this.chkSensitiveSkin.UseVisualStyleBackColor = true;
@@ -346,9 +348,10 @@
             // 
             // chkFolding
             // 
-            this.chkFolding.Location = new System.Drawing.Point(0, 44);
+            this.chkFolding.Location = new System.Drawing.Point(0, 54);
+            this.chkFolding.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkFolding.Name = "chkFolding";
-            this.chkFolding.Size = new System.Drawing.Size(138, 18);
+            this.chkFolding.Size = new System.Drawing.Size(184, 22);
             this.chkFolding.TabIndex = 0;
             this.chkFolding.Text = "Folding (RM10)";
             this.chkFolding.UseVisualStyleBackColor = true;
@@ -356,9 +359,10 @@
             // 
             // chkSameDayDelivery
             // 
-            this.chkSameDayDelivery.Location = new System.Drawing.Point(0, 20);
+            this.chkSameDayDelivery.Location = new System.Drawing.Point(0, 25);
+            this.chkSameDayDelivery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkSameDayDelivery.Name = "chkSameDayDelivery";
-            this.chkSameDayDelivery.Size = new System.Drawing.Size(162, 18);
+            this.chkSameDayDelivery.Size = new System.Drawing.Size(216, 22);
             this.chkSameDayDelivery.TabIndex = 0;
             this.chkSameDayDelivery.Text = "Same Day Delivery (RM10)";
             this.chkSameDayDelivery.UseVisualStyleBackColor = true;
@@ -366,10 +370,10 @@
             // 
             // CustomerDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(834, 511);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(177)))), ((int)(((byte)(214)))));
+            this.ClientSize = new System.Drawing.Size(1112, 629);
             this.Controls.Add(this.grpSpecialtyOptions);
             this.Controls.Add(this.lblTotalAmount);
             this.Controls.Add(this.btnBack);
@@ -386,6 +390,7 @@
             this.Controls.Add(this.pickupChkBox);
             this.Controls.Add(this.ServiceLbl);
             this.Controls.Add(this.reserveLbl);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CustomerDashboard";
             this.Text = "Customer Dashboard";
             this.TimeSlotGpBox.ResumeLayout(false);

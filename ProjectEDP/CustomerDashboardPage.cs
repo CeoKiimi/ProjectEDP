@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -13,58 +7,20 @@ namespace ProjectEDP
 {
     public partial class CustomerDashboard : Form
     {
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + System.IO.Path.GetFullPath(System.IO.Path.Combine(Application.StartupPath, @"..\..\EasyLaundry.mdf")) + @";Integrated Security=True;Connect Timeout=30";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="
+            + System.IO.Path.GetFullPath(System.IO.Path.Combine(Application.StartupPath, @"..\..\EasyLaundry.mdf"))
+            + @";Integrated Security=True;Connect Timeout=30";
+
         public CustomerDashboard()
         {
             InitializeComponent();
+
+            grpSpecialtyOptions.Visible = false;
+            UpdateTotalAmount();
         }
 
-        private void reserveLbl_Click(object sender, EventArgs e)
+        private List<string> GetSelectedServices()
         {
-
-        }
-
-        private void TimeLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private decimal GetTotalAmount(SqlConnection con, List<string> services)
-        {
-            decimal totalAmount = 0;
-
-            foreach (string service in services)
-            {
-                string query = @"SELECT price 
-                         FROM Pricing_Catalog 
-                         WHERE serviceName = @ServiceName";
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@ServiceName", service);
-
-                    object result = cmd.ExecuteScalar();
-
-                    if (result == null)
-                    {
-                        throw new Exception("Price not found for service: " + service);
-                    }
-
-                    totalAmount += Convert.ToDecimal(result);
-                }
-            }
-
-            return totalAmount;
-        }
-
-        private void SubmitBtn_Click(object sender, EventArgs e)
-        {
-            if (CurrentUser.CustomerID == 0)
-            {
-                MessageBox.Show("Please login first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
             List<string> services = new List<string>();
 
             if (pickupChkBox.Checked)
@@ -82,9 +38,166 @@ namespace ProjectEDP
                 services.Add("Specialty Laundry");
             }
 
+            return services;
+        }
+
+        private List<string> GetSelectedSpecialtyOptions()
+        {
+            List<string> options = new List<string>();
+
+            if (!SpecialChkBox.Checked)
+            {
+                return options;
+            }
+
+            if (chkSameDayDelivery.Checked)
+            {
+                options.Add("Same Day Delivery");
+            }
+
+            if (chkFolding.Checked)
+            {
+                options.Add("Folding");
+            }
+
+            if (chkSensitiveSkin.Checked)
+            {
+                options.Add("Sensitive Skin Laundry Care");
+            }
+
+            if (chkDryCleaning.Checked)
+            {
+                options.Add("Dry Cleaning");
+            }
+
+            return options;
+        }
+
+        private decimal GetPriceFromCatalog(SqlConnection con, string serviceName)
+        {
+            string query = @"SELECT price
+                             FROM Pricing_Catalog
+                             WHERE LTRIM(RTRIM(serviceName)) = @ServiceName";
+
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                cmd.Parameters.AddWithValue("@ServiceName", serviceName);
+
+                object result = cmd.ExecuteScalar();
+
+                if (result == null)
+                {
+                    throw new Exception("Price not found for service: " + serviceName);
+                }
+
+                return Convert.ToDecimal(result);
+            }
+        }
+
+        private decimal CalculateTotalAmount()
+        {
+            decimal totalAmount = 0;
+
+            List<string> services = GetSelectedServices();
+            List<string> specialtyOptions = GetSelectedSpecialtyOptions();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+
+                foreach (string service in services)
+                {
+                    totalAmount += GetPriceFromCatalog(con, service);
+                }
+
+                foreach (string option in specialtyOptions)
+                {
+                    totalAmount += GetPriceFromCatalog(con, option);
+                }
+            }
+
+            return totalAmount;
+        }
+
+        private void UpdateTotalAmount()
+        {
+            try
+            {
+                decimal totalAmount = CalculateTotalAmount();
+                lblTotalAmount.Text = "TOTAL AMOUNT: RM " + totalAmount.ToString("0.00");
+            }
+            catch (Exception ex)
+            {
+                lblTotalAmount.Text = "TOTAL AMOUNT: RM 0.00";
+                MessageBox.Show("Pricing error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void pickupChkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateTotalAmount();
+        }
+
+        private void DeliveryChkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateTotalAmount();
+        }
+
+        private void SpecialChkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            grpSpecialtyOptions.Visible = SpecialChkBox.Checked;
+
+            if (!SpecialChkBox.Checked)
+            {
+                chkSameDayDelivery.Checked = false;
+                chkFolding.Checked = false;
+                chkSensitiveSkin.Checked = false;
+                chkDryCleaning.Checked = false;
+            }
+
+            UpdateTotalAmount();
+        }
+
+        private void chkSameDayDelivery_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateTotalAmount();
+        }
+
+        private void chkFolding_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateTotalAmount();
+        }
+
+        private void chkSensitiveSkin_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateTotalAmount();
+        }
+
+        private void chkDryCleaning_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateTotalAmount();
+        }
+
+        private void SubmitBtn_Click(object sender, EventArgs e)
+        {
+            if (CurrentUser.CustomerID == 0)
+            {
+                MessageBox.Show("Please login first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            List<string> services = GetSelectedServices();
+            List<string> specialtyOptions = GetSelectedSpecialtyOptions();
+
             if (services.Count == 0)
             {
                 MessageBox.Show("Please select at least one service type.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (SpecialChkBox.Checked && specialtyOptions.Count == 0)
+            {
+                MessageBox.Show("Please select at least one specialty option.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -131,20 +244,23 @@ namespace ProjectEDP
             }
 
             string deliveryAddress = AddressTxtBox.Text.Trim();
-            string specialtyDetails = InstructionsTxt.Text.Trim();
-            decimal totalAmount = 0;
+
+            string specialtyDetails = specialtyOptions.Count > 0
+                ? string.Join(", ", specialtyOptions)
+                : "-";
 
             try
             {
+                decimal totalAmount = CalculateTotalAmount();
+
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    totalAmount = GetTotalAmount(con, services);
 
                     string query = @"INSERT INTO Reservation
-                                   (customerID, serviceType, reservationDate, timeSlot, paymentMethod, deliveryAddress, specialtyDetails, totalAmount)
-                                   VALUES
-                                   (@CustomerID, @ServiceType, @ReservationDate, @TimeSlot, @PaymentMethod, @DeliveryAddress, @SpecialtyDetails, @TotalAmount)";
+                                     (customerID, serviceType, reservationDate, timeSlot, paymentMethod, deliveryAddress, specialtyDetails, totalAmount)
+                                     VALUES
+                                     (@CustomerID, @ServiceType, @ReservationDate, @TimeSlot, @PaymentMethod, @DeliveryAddress, @SpecialtyDetails, @TotalAmount)";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
@@ -176,6 +292,31 @@ namespace ProjectEDP
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void reserveLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TimeLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpSpecialtyOptions_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalAmount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,13 +41,15 @@
             // reserveLbl
             // 
             this.reserveLbl.AutoSize = true;
+            this.reserveLbl.BackColor = System.Drawing.Color.Transparent;
             this.reserveLbl.Font = new System.Drawing.Font("Showcard Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reserveLbl.Location = new System.Drawing.Point(306, 20);
-            this.reserveLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.reserveLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.reserveLbl.Location = new System.Drawing.Point(408, 25);
             this.reserveLbl.Name = "reserveLbl";
-            this.reserveLbl.Size = new System.Drawing.Size(425, 47);
+            this.reserveLbl.Size = new System.Drawing.Size(529, 59);
             this.reserveLbl.TabIndex = 1;
             this.reserveLbl.Text = "Manage Reservation";
+            this.reserveLbl.Click += new System.EventHandler(this.reserveLbl_Click);
             // 
             // dgvAdminReservations
             // 
@@ -55,19 +57,22 @@
             this.dgvAdminReservations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAdminReservations.BackgroundColor = System.Drawing.Color.White;
             this.dgvAdminReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAdminReservations.Location = new System.Drawing.Point(25, 83);
+            this.dgvAdminReservations.Location = new System.Drawing.Point(33, 102);
+            this.dgvAdminReservations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvAdminReservations.Name = "dgvAdminReservations";
             this.dgvAdminReservations.ReadOnly = true;
+            this.dgvAdminReservations.RowHeadersWidth = 51;
             this.dgvAdminReservations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAdminReservations.Size = new System.Drawing.Size(938, 398);
+            this.dgvAdminReservations.Size = new System.Drawing.Size(1251, 490);
             this.dgvAdminReservations.TabIndex = 2;
             // 
             // btnRefresh
             // 
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(279, 502);
+            this.btnRefresh.Location = new System.Drawing.Point(372, 618);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(91, 37);
+            this.btnRefresh.Size = new System.Drawing.Size(121, 46);
             this.btnRefresh.TabIndex = 3;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -76,9 +81,10 @@
             // btnApprove
             // 
             this.btnApprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApprove.Location = new System.Drawing.Point(503, 502);
+            this.btnApprove.Location = new System.Drawing.Point(671, 618);
+            this.btnApprove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnApprove.Name = "btnApprove";
-            this.btnApprove.Size = new System.Drawing.Size(91, 37);
+            this.btnApprove.Size = new System.Drawing.Size(121, 46);
             this.btnApprove.TabIndex = 4;
             this.btnApprove.Text = "Approve";
             this.btnApprove.UseVisualStyleBackColor = true;
@@ -87,9 +93,10 @@
             // btnReject
             // 
             this.btnReject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReject.Location = new System.Drawing.Point(392, 502);
+            this.btnReject.Location = new System.Drawing.Point(523, 618);
+            this.btnReject.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReject.Name = "btnReject";
-            this.btnReject.Size = new System.Drawing.Size(91, 37);
+            this.btnReject.Size = new System.Drawing.Size(121, 46);
             this.btnReject.TabIndex = 5;
             this.btnReject.Text = "Reject";
             this.btnReject.UseVisualStyleBackColor = true;
@@ -98,9 +105,10 @@
             // btnViewOrders
             // 
             this.btnViewOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewOrders.Location = new System.Drawing.Point(617, 502);
+            this.btnViewOrders.Location = new System.Drawing.Point(823, 618);
+            this.btnViewOrders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnViewOrders.Name = "btnViewOrders";
-            this.btnViewOrders.Size = new System.Drawing.Size(91, 37);
+            this.btnViewOrders.Size = new System.Drawing.Size(121, 46);
             this.btnViewOrders.TabIndex = 6;
             this.btnViewOrders.Text = "VIEW ORDERS";
             this.btnViewOrders.UseVisualStyleBackColor = true;
@@ -109,9 +117,10 @@
             // bckBtn
             // 
             this.bckBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bckBtn.Location = new System.Drawing.Point(35, 36);
+            this.bckBtn.Location = new System.Drawing.Point(47, 44);
+            this.bckBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bckBtn.Name = "bckBtn";
-            this.bckBtn.Size = new System.Drawing.Size(91, 37);
+            this.bckBtn.Size = new System.Drawing.Size(121, 46);
             this.bckBtn.TabIndex = 7;
             this.bckBtn.Text = "Back";
             this.bckBtn.UseVisualStyleBackColor = true;
@@ -119,10 +128,10 @@
             // 
             // AdminDashboardPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(177)))), ((int)(((byte)(214)))));
+            this.ClientSize = new System.Drawing.Size(1312, 690);
             this.Controls.Add(this.bckBtn);
             this.Controls.Add(this.btnViewOrders);
             this.Controls.Add(this.btnReject);
@@ -130,7 +139,7 @@
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dgvAdminReservations);
             this.Controls.Add(this.reserveLbl);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminDashboardPage";
             this.Text = "Admin Dashboard";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);

@@ -39,28 +39,31 @@
             // 
             this.dgvReservations.BackgroundColor = System.Drawing.Color.White;
             this.dgvReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservations.Location = new System.Drawing.Point(23, 79);
+            this.dgvReservations.Location = new System.Drawing.Point(31, 97);
+            this.dgvReservations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvReservations.Name = "dgvReservations";
-            this.dgvReservations.Size = new System.Drawing.Size(936, 399);
+            this.dgvReservations.RowHeadersWidth = 51;
+            this.dgvReservations.Size = new System.Drawing.Size(1248, 491);
             this.dgvReservations.TabIndex = 0;
             // 
             // nothing
             // 
             this.nothing.AutoSize = true;
             this.nothing.Font = new System.Drawing.Font("Showcard Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nothing.Location = new System.Drawing.Point(293, 20);
-            this.nothing.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nothing.ForeColor = System.Drawing.SystemColors.Control;
+            this.nothing.Location = new System.Drawing.Point(391, 25);
             this.nothing.Name = "nothing";
-            this.nothing.Size = new System.Drawing.Size(425, 47);
+            this.nothing.Size = new System.Drawing.Size(529, 59);
             this.nothing.TabIndex = 1;
             this.nothing.Text = "Reservation Details";
             // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(743, 498);
+            this.btnBack.Location = new System.Drawing.Point(991, 613);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(90, 44);
+            this.btnBack.Size = new System.Drawing.Size(120, 54);
             this.btnBack.TabIndex = 22;
             this.btnBack.Text = "BACK";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -69,9 +72,10 @@
             // btnPay
             // 
             this.btnPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPay.Location = new System.Drawing.Point(858, 498);
+            this.btnPay.Location = new System.Drawing.Point(1144, 613);
+            this.btnPay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(90, 44);
+            this.btnPay.Size = new System.Drawing.Size(120, 54);
             this.btnPay.TabIndex = 23;
             this.btnPay.Text = "PAY";
             this.btnPay.UseVisualStyleBackColor = true;
@@ -79,14 +83,15 @@
             // 
             // CustomerReservationPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(177)))), ((int)(((byte)(214)))));
+            this.ClientSize = new System.Drawing.Size(1312, 690);
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.nothing);
             this.Controls.Add(this.dgvReservations);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CustomerReservationPage";
             this.Text = "Customer Reservation";
             this.Load += new System.EventHandler(this.CustomerReservationPage_Load);

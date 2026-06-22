@@ -251,5 +251,10 @@ namespace ProjectEDP
             form.Show();
             this.Hide();
         }
+
+        private void reserveLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace ProjectEDP
 {
     public partial class RegisterForm : Form
     {
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\EasyLaundry.mdf;Integrated Security=True;Connect Timeout=30";
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + System.IO.Path.GetFullPath(System.IO.Path.Combine(Application.StartupPath, @"..\..\EasyLaundry.mdf")) + @";Integrated Security=True;Connect Timeout=30";
 
         public RegisterForm()
         {

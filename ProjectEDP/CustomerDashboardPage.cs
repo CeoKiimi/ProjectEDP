@@ -318,5 +318,10 @@ namespace ProjectEDP
         {
 
         }
+
+        private void dateTimePickerOrder_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePickerOrder.MinDate = DateTime.Today.AddDays(1);
+        }
     }
 }

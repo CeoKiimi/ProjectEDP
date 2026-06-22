@@ -50,10 +50,10 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.lblTotalAmount = new System.Windows.Forms.Label();
             this.grpSpecialtyOptions = new System.Windows.Forms.GroupBox();
+            this.chkDryCleaning = new System.Windows.Forms.CheckBox();
             this.chkSensitiveSkin = new System.Windows.Forms.CheckBox();
             this.chkFolding = new System.Windows.Forms.CheckBox();
             this.chkSameDayDelivery = new System.Windows.Forms.CheckBox();
-            this.chkDryCleaning = new System.Windows.Forms.CheckBox();
             this.TimeSlotGpBox.SuspendLayout();
             this.paymentGrpBox.SuspendLayout();
             this.grpSpecialtyOptions.SuspendLayout();
@@ -300,7 +300,7 @@
             // 
             this.lblTotalAmount.AutoSize = true;
             this.lblTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAmount.Location = new System.Drawing.Point(428, 354);
+            this.lblTotalAmount.Location = new System.Drawing.Point(441, 369);
             this.lblTotalAmount.Name = "lblTotalAmount";
             this.lblTotalAmount.Size = new System.Drawing.Size(210, 25);
             this.lblTotalAmount.TabIndex = 22;
@@ -321,6 +321,18 @@
             this.grpSpecialtyOptions.Text = "Specialty Options";
             this.grpSpecialtyOptions.Visible = false;
             this.grpSpecialtyOptions.Enter += new System.EventHandler(this.grpSpecialtyOptions_Enter);
+            // 
+            // chkDryCleaning
+            // 
+            this.chkDryCleaning.AutoSize = true;
+            this.chkDryCleaning.Location = new System.Drawing.Point(0, 97);
+            this.chkDryCleaning.Name = "chkDryCleaning";
+            this.chkDryCleaning.Size = new System.Drawing.Size(124, 17);
+            this.chkDryCleaning.TabIndex = 1;
+            this.chkDryCleaning.Text = "Dry Cleaning (RM20)";
+            this.chkDryCleaning.UseVisualStyleBackColor = true;
+            this.chkDryCleaning.Visible = false;
+            this.chkDryCleaning.CheckedChanged += new System.EventHandler(this.chkDryCleaning_CheckedChanged);
             // 
             // chkSensitiveSkin
             // 
@@ -351,18 +363,6 @@
             this.chkSameDayDelivery.Text = "Same Day Delivery (RM10)";
             this.chkSameDayDelivery.UseVisualStyleBackColor = true;
             this.chkSameDayDelivery.CheckedChanged += new System.EventHandler(this.chkSameDayDelivery_CheckedChanged);
-            // 
-            // chkDryCleaning
-            // 
-            this.chkDryCleaning.AutoSize = true;
-            this.chkDryCleaning.Location = new System.Drawing.Point(0, 97);
-            this.chkDryCleaning.Name = "chkDryCleaning";
-            this.chkDryCleaning.Size = new System.Drawing.Size(124, 17);
-            this.chkDryCleaning.TabIndex = 1;
-            this.chkDryCleaning.Text = "Dry Cleaning (RM20)";
-            this.chkDryCleaning.UseVisualStyleBackColor = true;
-            this.chkDryCleaning.Visible = false;
-            this.chkDryCleaning.CheckedChanged += new System.EventHandler(this.chkDryCleaning_CheckedChanged);
             // 
             // CustomerDashboard
             // 

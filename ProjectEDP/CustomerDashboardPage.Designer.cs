@@ -46,13 +46,17 @@
             this.CardRB = new System.Windows.Forms.RadioButton();
             this.OnlineRB = new System.Windows.Forms.RadioButton();
             this.CodRB = new System.Windows.Forms.RadioButton();
-            this.instructionsLbl = new System.Windows.Forms.Label();
-            this.SpecialLbl = new System.Windows.Forms.Label();
-            this.InstructionsTxt = new System.Windows.Forms.TextBox();
             this.SubmitBtn = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.lblTotalAmount = new System.Windows.Forms.Label();
+            this.grpSpecialtyOptions = new System.Windows.Forms.GroupBox();
+            this.chkSensitiveSkin = new System.Windows.Forms.CheckBox();
+            this.chkFolding = new System.Windows.Forms.CheckBox();
+            this.chkSameDayDelivery = new System.Windows.Forms.CheckBox();
+            this.chkDryCleaning = new System.Windows.Forms.CheckBox();
             this.TimeSlotGpBox.SuspendLayout();
             this.paymentGrpBox.SuspendLayout();
+            this.grpSpecialtyOptions.SuspendLayout();
             this.SuspendLayout();
             // 
             // reserveLbl
@@ -89,6 +93,7 @@
             this.pickupChkBox.TabIndex = 2;
             this.pickupChkBox.Text = "Pickup ";
             this.pickupChkBox.UseVisualStyleBackColor = true;
+            this.pickupChkBox.Click += new System.EventHandler(this.pickupChkBox_CheckedChanged);
             // 
             // DeliveryChkBox
             // 
@@ -101,6 +106,7 @@
             this.DeliveryChkBox.TabIndex = 3;
             this.DeliveryChkBox.Text = "Delivery";
             this.DeliveryChkBox.UseVisualStyleBackColor = true;
+            this.DeliveryChkBox.Click += new System.EventHandler(this.DeliveryChkBox_CheckedChanged);
             // 
             // SpecialChkBox
             // 
@@ -113,10 +119,11 @@
             this.SpecialChkBox.TabIndex = 4;
             this.SpecialChkBox.Text = "Speciality Laundry";
             this.SpecialChkBox.UseVisualStyleBackColor = true;
+            this.SpecialChkBox.Click += new System.EventHandler(this.SpecialChkBox_CheckedChanged);
             // 
             // AddressTxtBox
             // 
-            this.AddressTxtBox.Location = new System.Drawing.Point(424, 169);
+            this.AddressTxtBox.Location = new System.Drawing.Point(432, 169);
             this.AddressTxtBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddressTxtBox.Multiline = true;
             this.AddressTxtBox.Name = "AddressTxtBox";
@@ -126,7 +133,7 @@
             // AddressLbl
             // 
             this.AddressLbl.AutoSize = true;
-            this.AddressLbl.Location = new System.Drawing.Point(422, 153);
+            this.AddressLbl.Location = new System.Drawing.Point(430, 153);
             this.AddressLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AddressLbl.Name = "AddressLbl";
             this.AddressLbl.Size = new System.Drawing.Size(98, 13);
@@ -208,7 +215,7 @@
             // 
             this.DetailsLbl.AutoSize = true;
             this.DetailsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DetailsLbl.Location = new System.Drawing.Point(422, 129);
+            this.DetailsLbl.Location = new System.Drawing.Point(430, 129);
             this.DetailsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DetailsLbl.Name = "DetailsLbl";
             this.DetailsLbl.Size = new System.Drawing.Size(97, 15);
@@ -266,36 +273,6 @@
             this.CodRB.Text = "Cash";
             this.CodRB.UseVisualStyleBackColor = true;
             // 
-            // instructionsLbl
-            // 
-            this.instructionsLbl.AutoSize = true;
-            this.instructionsLbl.Location = new System.Drawing.Point(422, 258);
-            this.instructionsLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.instructionsLbl.Name = "instructionsLbl";
-            this.instructionsLbl.Size = new System.Drawing.Size(139, 13);
-            this.instructionsLbl.TabIndex = 17;
-            this.instructionsLbl.Text = "Garment Type / Instructions";
-            // 
-            // SpecialLbl
-            // 
-            this.SpecialLbl.AutoSize = true;
-            this.SpecialLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SpecialLbl.Location = new System.Drawing.Point(422, 240);
-            this.SpecialLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.SpecialLbl.Name = "SpecialLbl";
-            this.SpecialLbl.Size = new System.Drawing.Size(106, 15);
-            this.SpecialLbl.TabIndex = 18;
-            this.SpecialLbl.Text = "Speciality Details :";
-            // 
-            // InstructionsTxt
-            // 
-            this.InstructionsTxt.Location = new System.Drawing.Point(424, 274);
-            this.InstructionsTxt.Margin = new System.Windows.Forms.Padding(2);
-            this.InstructionsTxt.Multiline = true;
-            this.InstructionsTxt.Name = "InstructionsTxt";
-            this.InstructionsTxt.Size = new System.Drawing.Size(198, 48);
-            this.InstructionsTxt.TabIndex = 19;
-            // 
             // SubmitBtn
             // 
             this.SubmitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -319,17 +296,84 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // lblTotalAmount
+            // 
+            this.lblTotalAmount.AutoSize = true;
+            this.lblTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAmount.Location = new System.Drawing.Point(428, 354);
+            this.lblTotalAmount.Name = "lblTotalAmount";
+            this.lblTotalAmount.Size = new System.Drawing.Size(210, 25);
+            this.lblTotalAmount.TabIndex = 22;
+            this.lblTotalAmount.Text = "TOTAL AMOUNT:  ";
+            this.lblTotalAmount.Click += new System.EventHandler(this.lblTotalAmount_Click);
+            // 
+            // grpSpecialtyOptions
+            // 
+            this.grpSpecialtyOptions.Controls.Add(this.chkDryCleaning);
+            this.grpSpecialtyOptions.Controls.Add(this.chkSensitiveSkin);
+            this.grpSpecialtyOptions.Controls.Add(this.chkFolding);
+            this.grpSpecialtyOptions.Controls.Add(this.chkSameDayDelivery);
+            this.grpSpecialtyOptions.Location = new System.Drawing.Point(430, 240);
+            this.grpSpecialtyOptions.Name = "grpSpecialtyOptions";
+            this.grpSpecialtyOptions.Size = new System.Drawing.Size(221, 115);
+            this.grpSpecialtyOptions.TabIndex = 23;
+            this.grpSpecialtyOptions.TabStop = false;
+            this.grpSpecialtyOptions.Text = "Specialty Options";
+            this.grpSpecialtyOptions.Visible = false;
+            this.grpSpecialtyOptions.Enter += new System.EventHandler(this.grpSpecialtyOptions_Enter);
+            // 
+            // chkSensitiveSkin
+            // 
+            this.chkSensitiveSkin.Location = new System.Drawing.Point(1, 68);
+            this.chkSensitiveSkin.Name = "chkSensitiveSkin";
+            this.chkSensitiveSkin.Size = new System.Drawing.Size(204, 23);
+            this.chkSensitiveSkin.TabIndex = 0;
+            this.chkSensitiveSkin.Text = "Sensitive Skin Laundry Care (RM20)";
+            this.chkSensitiveSkin.UseVisualStyleBackColor = true;
+            this.chkSensitiveSkin.CheckedChanged += new System.EventHandler(this.chkSensitiveSkin_CheckedChanged);
+            // 
+            // chkFolding
+            // 
+            this.chkFolding.Location = new System.Drawing.Point(0, 44);
+            this.chkFolding.Name = "chkFolding";
+            this.chkFolding.Size = new System.Drawing.Size(138, 18);
+            this.chkFolding.TabIndex = 0;
+            this.chkFolding.Text = "Folding (RM10)";
+            this.chkFolding.UseVisualStyleBackColor = true;
+            this.chkFolding.CheckedChanged += new System.EventHandler(this.chkFolding_CheckedChanged);
+            // 
+            // chkSameDayDelivery
+            // 
+            this.chkSameDayDelivery.Location = new System.Drawing.Point(0, 20);
+            this.chkSameDayDelivery.Name = "chkSameDayDelivery";
+            this.chkSameDayDelivery.Size = new System.Drawing.Size(162, 18);
+            this.chkSameDayDelivery.TabIndex = 0;
+            this.chkSameDayDelivery.Text = "Same Day Delivery (RM10)";
+            this.chkSameDayDelivery.UseVisualStyleBackColor = true;
+            this.chkSameDayDelivery.CheckedChanged += new System.EventHandler(this.chkSameDayDelivery_CheckedChanged);
+            // 
+            // chkDryCleaning
+            // 
+            this.chkDryCleaning.AutoSize = true;
+            this.chkDryCleaning.Location = new System.Drawing.Point(0, 97);
+            this.chkDryCleaning.Name = "chkDryCleaning";
+            this.chkDryCleaning.Size = new System.Drawing.Size(124, 17);
+            this.chkDryCleaning.TabIndex = 1;
+            this.chkDryCleaning.Text = "Dry Cleaning (RM20)";
+            this.chkDryCleaning.UseVisualStyleBackColor = true;
+            this.chkDryCleaning.Visible = false;
+            this.chkDryCleaning.CheckedChanged += new System.EventHandler(this.chkDryCleaning_CheckedChanged);
+            // 
             // CustomerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(834, 511);
+            this.Controls.Add(this.grpSpecialtyOptions);
+            this.Controls.Add(this.lblTotalAmount);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.SubmitBtn);
-            this.Controls.Add(this.InstructionsTxt);
-            this.Controls.Add(this.SpecialLbl);
-            this.Controls.Add(this.instructionsLbl);
             this.Controls.Add(this.paymentGrpBox);
             this.Controls.Add(this.DetailsLbl);
             this.Controls.Add(this.TimeSlotGpBox);
@@ -348,6 +392,8 @@
             this.TimeSlotGpBox.PerformLayout();
             this.paymentGrpBox.ResumeLayout(false);
             this.paymentGrpBox.PerformLayout();
+            this.grpSpecialtyOptions.ResumeLayout(false);
+            this.grpSpecialtyOptions.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,10 +419,13 @@
         private System.Windows.Forms.RadioButton CardRB;
         private System.Windows.Forms.RadioButton OnlineRB;
         private System.Windows.Forms.RadioButton CodRB;
-        private System.Windows.Forms.Label instructionsLbl;
-        private System.Windows.Forms.Label SpecialLbl;
-        private System.Windows.Forms.TextBox InstructionsTxt;
         private System.Windows.Forms.Button SubmitBtn;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblTotalAmount;
+        private System.Windows.Forms.GroupBox grpSpecialtyOptions;
+        private System.Windows.Forms.CheckBox chkSensitiveSkin;
+        private System.Windows.Forms.CheckBox chkFolding;
+        private System.Windows.Forms.CheckBox chkSameDayDelivery;
+        private System.Windows.Forms.CheckBox chkDryCleaning;
     }
 }

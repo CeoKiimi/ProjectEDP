@@ -55,9 +55,9 @@ namespace ProjectEDP
                     con.Open();
 
                     //admin
-                    string adminQuery = @"SELECT adminID, adminName
+                    string adminQuery = @"SELECT adminID, adminEmail, adminName
                       FROM Admin
-                      WHERE adminName = @Username
+                      WHERE adminEmail = @Username
                       AND [password] = @Password";
 
                     using (SqlCommand adminCmd = new SqlCommand(adminQuery, con))

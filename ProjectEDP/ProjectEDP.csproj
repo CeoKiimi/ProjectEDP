@@ -189,10 +189,10 @@
   <ItemGroup>
     <Content Include="database.sql" />
     <Content Include="EasyLaundry.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="EasyLaundry_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>EasyLaundry.mdf</DependentUpon>
     </Content>
     <None Include="Resources\laundry2.jpg" />

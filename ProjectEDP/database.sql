@@ -1,10 +1,4 @@
-﻿-- kalau blom ada database, xyh drop table la
-DROP TABLE IF EXISTS [dbo].[Payment];
-DROP TABLE IF EXISTS [dbo].[Order];
-DROP TABLE IF EXISTS [dbo].[Reservation];
-DROP TABLE IF EXISTS [dbo].[Pricing_Catalog];
-DROP TABLE IF EXISTS [dbo].[Customer];
-DROP TABLE IF EXISTS [dbo].[Admin];
+﻿
 
 CREATE TABLE [dbo].[Admin]
 (

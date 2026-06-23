@@ -124,7 +124,14 @@ namespace ProjectEDP
             
             try
             {
-                decimal totalAmount = CalculateTotalAmount() + 3.00m;
+                decimal serviceAmount = CalculateTotalAmount();
+                decimal totalAmount = 0.00m;
+
+                if (GetSelectedServices().Count > 0)
+                {
+                    totalAmount = serviceAmount + 3.00m;
+                }
+
                 lblTotalAmount.Text = $"TOTAL AMOUNT: RM {totalAmount:0.00}";
             }
             catch (Exception ex)
@@ -253,7 +260,7 @@ namespace ProjectEDP
 
             try
             {
-                decimal totalAmount = CalculateTotalAmount();
+                decimal totalAmount = CalculateTotalAmount() + 3.00m ;
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
@@ -319,6 +326,16 @@ namespace ProjectEDP
         private void dateTimePickerOrder_ValueChanged(object sender, EventArgs e)
         {
             dateTimePickerOrder.MinDate = DateTime.Today.AddDays(1);
+
+            if (dateTimePickerOrder.Value.Date < DateTime.Today.AddDays(1))
+            {
+                MessageBox.Show("Please select a date from tomorrow onwards.",
+                    "Invalid Date",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                dateTimePickerOrder.Value = DateTime.Today.AddDays(1);
+            }
         }
 
         private void pickupChkBox_CheckedChanged_1(object sender, EventArgs e)
@@ -328,6 +345,9 @@ namespace ProjectEDP
 
         private void CustomerDashboard_Load(object sender, EventArgs e)
         {
+            dateTimePickerOrder.MinDate = DateTime.Today.AddDays(1);
+            dateTimePickerOrder.Value = DateTime.Today.AddDays(1);
+
             lblTotalAmount.Text = "TOTAL AMOUNT: RM 0.00";
         }
     }

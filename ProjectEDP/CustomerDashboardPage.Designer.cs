@@ -76,6 +76,7 @@
             // 
             this.ServiceLbl.AutoSize = true;
             this.ServiceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServiceLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.ServiceLbl.Location = new System.Drawing.Point(132, 159);
             this.ServiceLbl.Name = "ServiceLbl";
             this.ServiceLbl.Size = new System.Drawing.Size(138, 18);
@@ -86,12 +87,13 @@
             // 
             this.pickupChkBox.AutoSize = true;
             this.pickupChkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pickupChkBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.pickupChkBox.Location = new System.Drawing.Point(135, 188);
             this.pickupChkBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pickupChkBox.Name = "pickupChkBox";
-            this.pickupChkBox.Size = new System.Drawing.Size(103, 22);
+            this.pickupChkBox.Size = new System.Drawing.Size(149, 22);
             this.pickupChkBox.TabIndex = 2;
-            this.pickupChkBox.Text = "Wash Only";
+            this.pickupChkBox.Text = "Wash Only (RM4)\r\n";
             this.pickupChkBox.UseVisualStyleBackColor = true;
             this.pickupChkBox.CheckedChanged += new System.EventHandler(this.pickupChkBox_CheckedChanged_1);
             this.pickupChkBox.Click += new System.EventHandler(this.pickupChkBox_CheckedChanged);
@@ -100,12 +102,13 @@
             // 
             this.DeliveryChkBox.AutoSize = true;
             this.DeliveryChkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeliveryChkBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.DeliveryChkBox.Location = new System.Drawing.Point(135, 215);
             this.DeliveryChkBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeliveryChkBox.Name = "DeliveryChkBox";
-            this.DeliveryChkBox.Size = new System.Drawing.Size(124, 22);
+            this.DeliveryChkBox.Size = new System.Drawing.Size(170, 22);
             this.DeliveryChkBox.TabIndex = 3;
-            this.DeliveryChkBox.Text = "Wash and Dry";
+            this.DeliveryChkBox.Text = "Wash and Dry (RM9)\r\n";
             this.DeliveryChkBox.UseVisualStyleBackColor = true;
             this.DeliveryChkBox.Click += new System.EventHandler(this.DeliveryChkBox_CheckedChanged);
             // 
@@ -113,6 +116,7 @@
             // 
             this.SpecialChkBox.AutoSize = true;
             this.SpecialChkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpecialChkBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.SpecialChkBox.Location = new System.Drawing.Point(135, 241);
             this.SpecialChkBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SpecialChkBox.Name = "SpecialChkBox";
@@ -134,6 +138,7 @@
             // AddressLbl
             // 
             this.AddressLbl.AutoSize = true;
+            this.AddressLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.AddressLbl.Location = new System.Drawing.Point(573, 188);
             this.AddressLbl.Name = "AddressLbl";
             this.AddressLbl.Size = new System.Drawing.Size(123, 16);
@@ -145,6 +150,7 @@
             this.DateLbl.AutoSize = true;
             this.DateLbl.BackColor = System.Drawing.Color.Transparent;
             this.DateLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DateLbl.Location = new System.Drawing.Point(136, 277);
             this.DateLbl.Name = "DateLbl";
             this.DateLbl.Size = new System.Drawing.Size(84, 18);
@@ -202,6 +208,7 @@
             this.TimeSlotGpBox.Controls.Add(this.nightRB);
             this.TimeSlotGpBox.Controls.Add(this.eveningRB);
             this.TimeSlotGpBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeSlotGpBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TimeSlotGpBox.Location = new System.Drawing.Point(135, 337);
             this.TimeSlotGpBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TimeSlotGpBox.Name = "TimeSlotGpBox";
@@ -215,6 +222,7 @@
             // 
             this.DetailsLbl.AutoSize = true;
             this.DetailsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DetailsLbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.DetailsLbl.Location = new System.Drawing.Point(573, 159);
             this.DetailsLbl.Name = "DetailsLbl";
             this.DetailsLbl.Size = new System.Drawing.Size(117, 18);
@@ -227,6 +235,7 @@
             this.paymentGrpBox.Controls.Add(this.OnlineRB);
             this.paymentGrpBox.Controls.Add(this.CodRB);
             this.paymentGrpBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentGrpBox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.paymentGrpBox.Location = new System.Drawing.Point(135, 465);
             this.paymentGrpBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.paymentGrpBox.Name = "paymentGrpBox";
@@ -300,6 +309,7 @@
             // 
             this.lblTotalAmount.AutoSize = true;
             this.lblTotalAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAmount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTotalAmount.Location = new System.Drawing.Point(582, 477);
             this.lblTotalAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalAmount.Name = "lblTotalAmount";
@@ -314,6 +324,7 @@
             this.grpSpecialtyOptions.Controls.Add(this.chkSensitiveSkin);
             this.grpSpecialtyOptions.Controls.Add(this.chkFolding);
             this.grpSpecialtyOptions.Controls.Add(this.chkSameDayDelivery);
+            this.grpSpecialtyOptions.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.grpSpecialtyOptions.Location = new System.Drawing.Point(573, 295);
             this.grpSpecialtyOptions.Margin = new System.Windows.Forms.Padding(4);
             this.grpSpecialtyOptions.Name = "grpSpecialtyOptions";

@@ -52,7 +52,7 @@
             // 
             this.btnPayNow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayNow.Location = new System.Drawing.Point(863, 537);
-            this.btnPayNow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPayNow.Margin = new System.Windows.Forms.Padding(4);
             this.btnPayNow.Name = "btnPayNow";
             this.btnPayNow.Size = new System.Drawing.Size(177, 57);
             this.btnPayNow.TabIndex = 0;
@@ -64,7 +64,7 @@
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(692, 537);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(160, 57);
             this.btnBack.TabIndex = 1;
@@ -172,9 +172,9 @@
             this.groupOrderSummary.Controls.Add(this.lblTimeSlot);
             this.groupOrderSummary.ForeColor = System.Drawing.SystemColors.Control;
             this.groupOrderSummary.Location = new System.Drawing.Point(56, 142);
-            this.groupOrderSummary.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupOrderSummary.Margin = new System.Windows.Forms.Padding(4);
             this.groupOrderSummary.Name = "groupOrderSummary";
-            this.groupOrderSummary.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupOrderSummary.Padding = new System.Windows.Forms.Padding(4);
             this.groupOrderSummary.Size = new System.Drawing.Size(452, 378);
             this.groupOrderSummary.TabIndex = 10;
             this.groupOrderSummary.TabStop = false;
@@ -211,9 +211,9 @@
             this.groupPaymentDetails.Controls.Add(this.lblOrderStatus);
             this.groupPaymentDetails.ForeColor = System.Drawing.SystemColors.Control;
             this.groupPaymentDetails.Location = new System.Drawing.Point(613, 142);
-            this.groupPaymentDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupPaymentDetails.Margin = new System.Windows.Forms.Padding(4);
             this.groupPaymentDetails.Name = "groupPaymentDetails";
-            this.groupPaymentDetails.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupPaymentDetails.Padding = new System.Windows.Forms.Padding(4);
             this.groupPaymentDetails.Size = new System.Drawing.Size(435, 378);
             this.groupPaymentDetails.TabIndex = 11;
             this.groupPaymentDetails.TabStop = false;
@@ -252,7 +252,7 @@
             this.Controls.Add(this.nothing);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnPayNow);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PaymentPage";
             this.Text = "Payment Page";
             this.Load += new System.EventHandler(this.PaymentPage_Load);

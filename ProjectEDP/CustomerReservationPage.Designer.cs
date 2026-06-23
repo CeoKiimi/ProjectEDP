@@ -40,11 +40,12 @@
             this.dgvReservations.BackgroundColor = System.Drawing.Color.White;
             this.dgvReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReservations.Location = new System.Drawing.Point(31, 97);
-            this.dgvReservations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvReservations.Margin = new System.Windows.Forms.Padding(4);
             this.dgvReservations.Name = "dgvReservations";
             this.dgvReservations.RowHeadersWidth = 51;
             this.dgvReservations.Size = new System.Drawing.Size(1248, 491);
             this.dgvReservations.TabIndex = 0;
+            this.dgvReservations.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservations_CellContentClick);
             // 
             // nothing
             // 
@@ -61,7 +62,7 @@
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(991, 613);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(120, 54);
             this.btnBack.TabIndex = 22;
@@ -73,7 +74,7 @@
             // 
             this.btnPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.Location = new System.Drawing.Point(1144, 613);
-            this.btnPay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPay.Margin = new System.Windows.Forms.Padding(4);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(120, 54);
             this.btnPay.TabIndex = 23;
@@ -91,7 +92,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.nothing);
             this.Controls.Add(this.dgvReservations);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CustomerReservationPage";
             this.Text = "Customer Reservation";
             this.Load += new System.EventHandler(this.CustomerReservationPage_Load);

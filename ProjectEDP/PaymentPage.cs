@@ -37,12 +37,12 @@ namespace ProjectEDP
 
         private void SetupPaymentPageDesign()
         {
-            this.BackColor = Color.FromArgb(176, 176, 176);
+            this.BackColor = Color.FromArgb(110, 177, 214);
 
-            groupOrderSummary.BackColor = Color.WhiteSmoke;
+            groupOrderSummary.BackColor = Color.FromArgb(110, 177, 214);
             groupOrderSummary.Font = new Font("Arial", 10, FontStyle.Bold);
 
-            groupPaymentDetails.BackColor = Color.WhiteSmoke;
+            groupPaymentDetails.BackColor = Color.FromArgb(110, 177, 214);
             groupPaymentDetails.Font = new Font("Arial", 10, FontStyle.Bold);
 
             btnBack.FlatStyle = FlatStyle.Flat;

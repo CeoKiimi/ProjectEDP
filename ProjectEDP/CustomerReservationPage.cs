@@ -70,7 +70,7 @@ namespace ProjectEDP
                                      LEFT JOIN Payment p
                                      ON o.orderID = p.orderID
                                      WHERE r.customerID = @CustomerID
-                                     ORDER BY r.createdAt DESC";
+                                     ORDER BY r.serviceType DESC";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {

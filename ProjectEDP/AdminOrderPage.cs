@@ -28,6 +28,7 @@ namespace ProjectEDP
         private void AdminOrderPage_Load(object sender, EventArgs e)
         {
             LoadOrders();
+            LoadTotalRevenue();
         }
 
         private void LoadOrders()
@@ -83,6 +84,7 @@ namespace ProjectEDP
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadOrders();
+            LoadTotalRevenue();
         }
 
         private void btnCompleted_Click(object sender, EventArgs e)
@@ -151,6 +153,44 @@ namespace ProjectEDP
         }
 
         private void reserveLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadTotalRevenue()
+{
+    try
+    {
+        using (SqlConnection con = new SqlConnection(connectionString))
+        {
+            con.Open();
+
+                    string query = @"
+                SELECT ISNULL(SUM(r.totalAmount), 0)
+                FROM [Order] o
+                INNER JOIN Reservation r
+                    ON o.reservationID = r.reservationID
+                LEFT JOIN Payment p
+                    ON o.orderID = p.orderID
+                WHERE p.paymentStatus = 'Paid'
+                    AND o.orderStatus = 'Completed'";
+
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                decimal totalRevenue = Convert.ToDecimal(cmd.ExecuteScalar());
+
+                lblTotalRevenue.Text = "TOTAL REVENUE: RM " + totalRevenue.ToString("0.00");
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        lblTotalRevenue.Text = "TOTAL REVENUE: RM 0.00";
+        MessageBox.Show("Revenue error:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+    }
+}
+
+        private void lblTotalRevenue_Click(object sender, EventArgs e)
         {
 
         }

@@ -101,6 +101,11 @@
     <Compile Include="CustomerReservationPage.Designer.cs">
       <DependentUpon>CustomerReservationPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSetEasyLaundry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEasyLaundry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Homepage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +172,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSetEasyLaundry.xsc">
+      <DependentUpon>DataSetEasyLaundry.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetEasyLaundry.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEasyLaundry.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetEasyLaundry.xss">
+      <DependentUpon>DataSetEasyLaundry.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

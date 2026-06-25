@@ -260,7 +260,11 @@ namespace ProjectEDP
 
             try
             {
+<<<<<<< HEAD
                 decimal totalAmount = CalculateTotalAmount() + 3.00m ;
+=======
+                decimal totalAmount = CalculateTotalAmount() + 3.00m;
+>>>>>>> ff3e72566769bdd0acb09e17866783b75ea8d6ab
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {

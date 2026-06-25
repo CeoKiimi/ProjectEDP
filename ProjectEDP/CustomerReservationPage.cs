@@ -138,5 +138,10 @@ namespace ProjectEDP
             Homepage form = new Homepage();
             this.Close();
         }
+
+        private void dgvReservations_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿IF NOT EXISTS (SELECT 1 FROM Pricing_Catalog WHERE serviceName = 'Pickup')
 BEGIN
     INSERT INTO Pricing_Catalog (serviceName, price)
@@ -39,3 +40,8 @@ BEGIN
     INSERT INTO Pricing_Catalog (serviceName, price)
     VALUES ('Dry Cleaning', 20.00);
 END;
+=======
+﻿UPDATE [dbo].[Pricing_Catalog]
+SET [serviceName] = 'Specialty Laundry'
+WHERE [serviceName] = 'Specialty Laundry Care';
+>>>>>>> ff3e72566769bdd0acb09e17866783b75ea8d6ab
